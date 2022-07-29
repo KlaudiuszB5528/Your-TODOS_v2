@@ -1,4 +1,4 @@
-import { TodosContext } from "../../context/todos-context";
+import { TodosContext } from "../context/todos-context";
 import { useContext } from "react";
 
 interface TodoCardProps {

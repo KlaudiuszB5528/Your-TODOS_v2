@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { DisplayInbox } from "../components/MainSection/DisplayInbox";
+import { DisplayInbox } from "../components/DisplayInbox";
 import { TodosContext } from "../context/todos-context";
 import { useContext } from "react";
 

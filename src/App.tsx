@@ -1,7 +1,7 @@
-import { Footer } from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import { MainSection } from "./components/MainSection/MainSection";
-import { Sidebar } from "./components/Sidebar/Sidebar";
+import { Footer } from "./components/Footer";
+import Header from "./components/Header";
+import { MainSection } from "./components/MainSection";
+import { Sidebar } from "./components/Sidebar";
 import { TodosContextProvider } from "./context/todos-context";
 
 const App: React.FC = () => {

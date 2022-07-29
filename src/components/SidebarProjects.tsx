@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { TodosContext } from "../../context/todos-context";
+import { TodosContext } from "../context/todos-context";
 import { SidebarProjectListElement } from "./SidebarProjectListElement";
 
 export const SidebarProjects: React.FC = () => {

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
-import { TodosContext } from "../../context/todos-context";
+import { TodosContext } from "../context/todos-context";
 
 export const SidebarInbox: React.FC = () => {
   const { todos } = useContext(TodosContext);

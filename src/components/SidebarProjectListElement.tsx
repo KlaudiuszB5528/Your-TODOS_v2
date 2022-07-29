@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import { TodosContext } from "../../context/todos-context";
+import { TodosContext } from "../context/todos-context";
 
 interface Props {
   index: number;

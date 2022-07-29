@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { TodosContext } from "../../context/todos-context";
+import { TodosContext } from "../context/todos-context";
 import { TodoCard } from "./TodoCard";
 import { useContext, useState } from "react";
 import { Modal } from "./Modal";

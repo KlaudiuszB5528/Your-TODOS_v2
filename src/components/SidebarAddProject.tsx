@@ -1,5 +1,5 @@
 import { useState, useRef, useContext } from "react";
-import { TodosContext } from "../../context/todos-context";
+import { TodosContext } from "../context/todos-context";
 
 export const SidebarAddProject: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

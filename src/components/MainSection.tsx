@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "../../pages/Home";
-import { Inbox } from "../../pages/Inbox";
-import { Todos } from "../../pages/Todos";
+import { Home } from "../pages/Home";
+import { Inbox } from "../pages/Inbox";
+import { Todos } from "../pages/Todos";
 
 export const MainSection: React.FC = () => {
   return (

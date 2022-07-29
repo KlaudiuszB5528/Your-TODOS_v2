@@ -1,4 +1,4 @@
-import { Todo } from "../../context/todos-context";
+import { Todo } from "../context/todos-context";
 import { TodoCard } from "./TodoCard";
 
 interface Props {
