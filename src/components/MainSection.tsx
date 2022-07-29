@@ -7,7 +7,7 @@ export const MainSection: React.FC = () => {
   return (
     <div className="main-section">
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/Your-TODOS_v2" element={<Home />}></Route>
         <Route path="/inbox" element={<Inbox />}></Route>
         <Route path="/todays" element={<Inbox />}></Route>
         <Route path="/tomorrows" element={<Inbox />}></Route>
