@@ -1,0 +1,80 @@
+$white: #f9f7f7;
+$cold: #dbe2ef;
+$blue: #3f72af;
+$navy: #112d4e;
+$darkblue: #03396c;
+$red: #a42009;
+$green: #0f762c;
+
+@mixin displayFlexCentered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin displayFlexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: $cold;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $navy;
+  }
+
+  &::-webkit-scrollbar-button {
+    height: 20px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
