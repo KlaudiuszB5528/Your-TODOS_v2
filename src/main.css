@@ -120,7 +120,7 @@ h6 {
   margin-bottom: 5px;
 }
 .sidebar__inbox ul li {
-  flex-basis: 95%;
+  width: 95%;
   font-size: 1rem;
   border-radius: 5px;
   transition: background-color 0.2s ease-in-out;
@@ -707,4 +707,263 @@ h6 {
 }
 .footer i:hover {
   transform: rotateY(1turn) scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #dbe2ef;
+  }
+  *::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #112d4e;
+  }
+  *::-webkit-scrollbar-button {
+    height: 5px;
+  }
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .header {
+    height: 50px;
+    padding: 0.2rem;
+    letter-spacing: 8px;
+  }
+  .header__title {
+    gap: 0.3rem;
+    font-size: 1.1rem;
+  }
+  .header__title i {
+    font-size: 1.5rem;
+  }
+  .sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 160px 40px;
+    position: relative;
+  }
+  .sidebar__inbox {
+    padding-top: 0px;
+    border-bottom: 2px solid rgba(17, 45, 78, 0.5);
+  }
+  .sidebar__inbox ul {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding: 0 10px;
+  }
+  .sidebar__inbox ul li:last-child {
+    margin-bottom: 0px;
+  }
+  .sidebar__inbox ul li {
+    width: 60%;
+  }
+  .sidebar__inbox ul li a {
+    justify-content: center;
+    gap: 0.5rem;
+    color: #dbe2ef;
+    font-size: 0.9rem;
+    padding: 2px 4px;
+  }
+  .sidebar__inbox ul li a div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+  .sidebar__inbox ul li a span {
+    font-size: 0.6rem;
+    width: 16px;
+    height: 16px;
+  }
+  .sidebar__projects {
+    padding-top: 5px;
+    grid-template-rows: 16px 1fr;
+  }
+  .sidebar__projects .sidebar__projects-title {
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  .sidebar__projects .sidebar__projects-list {
+    width: 60%;
+    padding: 0.1rem 0.2rem;
+    overflow-y: auto;
+  }
+  .sidebar__projects .sidebar__projects-list ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    overflow-y: auto;
+  }
+  .sidebar__projects .sidebar__projects-list li {
+    height: 20px;
+    font-size: 0.8rem;
+    padding: 3px;
+  }
+  .sidebar__projects .sidebar__projects-list li .options {
+    font-size: 0.7rem;
+  }
+  .sidebar__addProject_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: row wrap;
+  }
+  .sidebar__add-project-btn {
+    height: 20px;
+    font-size: 1rem;
+    padding: 2px 4px;
+    margin-bottom: 1px;
+  }
+  .sidebar__add-project-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0px 3px 6px rgba(17, 45, 78, 0.6);
+  }
+  .sidebar__add-project-input,
+.sidebar__edit-project-input {
+    font-size: 0.8rem;
+    height: 19px;
+    width: 60%;
+  }
+  .sidebar__add-project-input:focus,
+.sidebar__edit-project-input:focus {
+    outline: none;
+  }
+  .sidebar__edit-project-input {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+  .confirm,
+.cancel {
+    display: none;
+  }
+  .sidebar__error {
+    position: absolute;
+    z-index: 1000;
+    top: 0px;
+    color: #a42009;
+    font-size: 1rem;
+  }
+  .main-section {
+    padding: 0.2rem;
+    height: 100%;
+  }
+  .todos-page .no-todos-info {
+    font-size: 2.2rem;
+  }
+  .todos-page .todos-page__project-title {
+    font-size: 1.4rem;
+  }
+  .todos-page .todos-page__todos-list {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 10px 20px;
+    overflow-y: auto;
+  }
+  .todos-page .todos-page__todos-list .card {
+    position: relative;
+    width: clamp(35ch, 55%, 70ch);
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.4rem;
+    background-color: #f9f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px rgba(17, 45, 78, 0.5);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable both-edges;
+  }
+  .todos-page .todos-page__todos-list .card .dueDate {
+    font-size: bold;
+    color: rgba(17, 45, 78, 0.6);
+    width: 100%;
+    text-align: center;
+  }
+  .todos-page .todos-page__todos-list .card .card__title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #112d4e;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .todos-page .todos-page__todos-list .card .card__description {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    word-wrap: break-word;
+    color: #03396c;
+    overflow-y: auto;
+  }
+  .todos-page .todos-page__todos-list .card .card__description::-webkit-scrollbar {
+    width: 3px;
+  }
+  .todos-page .todos-page__todos-list .card .card__description::-webkit-scrollbar-button {
+    height: 5px;
+  }
+  .todos-page .todos-page__todos-list .card .delete-todo-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    border: none;
+    outline: none;
+    background: none;
+    color: rgba(17, 45, 78, 0.5);
+  }
+  .todos-page .todos-page__todos-list .card .delete-todo-btn:hover {
+    color: #a42009;
+  }
+  .todos-page .todos-page__todos-list .card #todo-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 13px;
+    left: 5px;
+  }
+  .todos-page .todos-page__todos-list .card #todo-check:checked ~ .card__description {
+    text-decoration: line-through;
+  }
+  .todos-page .add-todo-btn {
+    width: 70px;
+    font-size: 0.9rem;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 2px gray;
+    gap: 5px;
+    color: #112d4e;
+    font-size: 0.7rem;
+  }
+  .footer i {
+    color: #112d4e;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  .footer i:hover {
+    transform: rotateY(1turn) scale(1.2);
+  }
 }/*# sourceMappingURL=main.css.map */

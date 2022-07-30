@@ -61,7 +61,7 @@
     }
 
     & li {
-      flex-basis: 95%;
+      width: 95%;
       font-size: 1rem;
       border-radius: 5px;
       transition: background-color 0.2s ease-in-out;
@@ -656,5 +656,259 @@
     &:hover {
       transform: rotateY(1turn) scale(1.2);
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: $cold;
+  }
+  *::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $navy;
+  }
+
+  *::-webkit-scrollbar-button {
+    height: 5px;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .header {
+    height: 50px;
+    padding: 0.2rem;
+    letter-spacing: 8px;
+  }
+
+  .header__title {
+    gap: 0.3rem;
+    font-size: 1.1rem;
+
+    & i {
+      font-size: 1.5rem;
+    }
+  }
+
+  .sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 160px 40px;
+    position: relative;
+  }
+
+  .sidebar__inbox {
+    padding-top: 0px;
+    border-bottom: 2px solid rgba($navy, 0.5);
+    & ul {
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 0.5rem;
+      padding: 0 10px;
+
+      & li:last-child {
+        margin-bottom: 0px;
+      }
+
+      & li {
+        width: 60%;
+        & a {
+          justify-content: center;
+          gap: 0.5rem;
+          color: $cold;
+          font-size: 0.9rem;
+          padding: 2px 4px;
+
+          & div {
+            @include displayFlexCentered;
+            gap: 6px;
+          }
+
+          & span {
+            font-size: 0.6rem;
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar__projects {
+    padding-top: 5px;
+    grid-template-rows: 16px 1fr;
+
+    & .sidebar__projects-title {
+      padding: 5px;
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    & .sidebar__projects-list {
+      width: 60%;
+      padding: 0.1rem 0.2rem;
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+
+      & ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        overflow-y: auto;
+      }
+
+      & li {
+        height: 20px;
+        font-size: 0.8rem;
+        padding: 3px;
+
+        & .options {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .sidebar__addProject_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: row wrap;
+  }
+
+  .sidebar__add-project-btn {
+    height: 20px;
+    font-size: 1rem;
+    padding: 2px 4px;
+    margin-bottom: 1px;
+
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0px 3px 6px rgba($navy, 0.6);
+    }
+  }
+
+  .sidebar__add-project-input,
+  .sidebar__edit-project-input {
+    font-size: 0.8rem;
+    height: 19px;
+    width: 60%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .sidebar__edit-project-input {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+
+  .confirm,
+  .cancel {
+    display: none;
+  }
+
+  .sidebar__error {
+    position: absolute;
+    z-index: 1000;
+    top: 0px;
+    color: $red;
+    font-size: 1rem;
+  }
+
+  .main-section {
+    padding: 0.2rem;
+    height: 100%;
+  }
+
+  .todos-page {
+    & .no-todos-info {
+      font-size: 2.2rem;
+    }
+
+    & .todos-page__project-title {
+      margin: 10px 0;
+      font-size: 1.4rem;
+    }
+
+    & .todos-page__todos-list {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 20px 40px;
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+
+      & .card {
+        position: relative;
+        width: clamp(35ch, 55%, 70ch);
+        height: 190px;
+        display: flex;
+        flex-direction: column;
+        padding: 0.4rem;
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 9px rgba($navy, 0.5);
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        scrollbar-gutter: stable both-edges;
+
+        & .dueDate {
+          font-size: bold;
+          color: rgba($navy, 0.6);
+          width: 100%;
+          text-align: center;
+        }
+
+        & .card__title {
+          width: 100%;
+          text-align: center;
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: $navy;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+
+        & .card__description {
+          width: 100%;
+          padding: 10px;
+          text-align: center;
+          font-size: 1rem;
+          word-wrap: break-word;
+          color: $darkblue;
+          overflow-y: auto;
+
+          &::-webkit-scrollbar {
+            width: 3px;
+          }
+
+          &::-webkit-scrollbar-button {
+            height: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  & .add-todo-btn {
+    width: 70px;
+    font-size: 0.9rem;
   }
 }

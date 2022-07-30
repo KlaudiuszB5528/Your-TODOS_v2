@@ -36,6 +36,11 @@ export const SidebarInbox: React.FC = () => {
     );
   }, [todos]);
 
+  const todaysTitle: string =
+    window.innerWidth > 600 ? "Today's tasks" : "Today";
+  const tomorrowsTitle: string =
+    window.innerWidth > 600 ? "Tomorrow's tasks" : "Tomorrow";
+
   return (
     <nav className="sidebar__inbox">
       <ul className="sidebar__inbox_ul">
@@ -56,7 +61,8 @@ export const SidebarInbox: React.FC = () => {
             className={({ isActive }) => (isActive ? "navlink_active" : "")}
           >
             <div>
-              <i className="fa-solid fa-calendar-day"></i>Today's tasks
+              <i className="fa-solid fa-calendar-day"></i>
+              {todaysTitle}
             </div>
             <span>{todaysCount}</span>
           </NavLink>
@@ -67,7 +73,8 @@ export const SidebarInbox: React.FC = () => {
             className={({ isActive }) => (isActive ? "navlink_active" : "")}
           >
             <div>
-              <i className="fa-solid fa-calendar-week"></i>Tomorrow's tasks
+              <i className="fa-solid fa-calendar-week"></i>
+              {tomorrowsTitle}
             </div>
             <span>{TomorrowsCount}</span>
           </NavLink>
