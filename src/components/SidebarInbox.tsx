@@ -41,7 +41,7 @@ export const SidebarInbox: React.FC = () => {
       <ul className="sidebar__inbox_ul">
         <li className="sidebar__inbox_li">
           <NavLink
-            to="/inbox"
+            to="/Your-TODOS_v2/inbox"
             className={({ isActive }) => (isActive ? "navlink_active" : "")}
           >
             <div>
@@ -52,7 +52,7 @@ export const SidebarInbox: React.FC = () => {
         </li>
         <li>
           <NavLink
-            to="/todays"
+            to="/Your-TODOS_v2/todays"
             className={({ isActive }) => (isActive ? "navlink_active" : "")}
           >
             <div>
@@ -63,7 +63,7 @@ export const SidebarInbox: React.FC = () => {
         </li>
         <li>
           <NavLink
-            to="/tomorrows"
+            to="/Your-TODOS_v2/tomorrows"
             className={({ isActive }) => (isActive ? "navlink_active" : "")}
           >
             <div>

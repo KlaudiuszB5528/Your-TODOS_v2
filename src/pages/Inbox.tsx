@@ -30,17 +30,17 @@ export const Inbox: React.FC = () => {
 
   return (
     <>
-      {location.pathname === "/inbox" && (
+      {location.pathname === "/Your-TODOS_v2/inbox" && (
         <DisplayInbox list={todos} title="Inbox" info={"You have no TODOS."} />
       )}
-      {location.pathname === "/todays" && (
+      {location.pathname === "/Your-TODOS_v2/todays" && (
         <DisplayInbox
           list={filteredTodays}
           title="Today's"
           info={"No TODOS for today. Enjoy Your day!"}
         />
       )}
-      {location.pathname === "/tomorrows" && (
+      {location.pathname === "/Your-TODOS_v2/tomorrows" && (
         <DisplayInbox
           list={filteredTomorrows}
           title="Tomorrow's"

@@ -43,7 +43,7 @@ export const SidebarProjectListElement: React.FC<Props> = (props) => {
         todo.project === oldName ? (todo.project = newName) : todo
       );
       if (location.pathname === `/todos/${oldName}`)
-        navigate(`/todos/${newName}`, { replace: true });
+        navigate(`/Your-TODOS_v2/todos/${newName}`, { replace: true });
     }
   };
 
@@ -64,7 +64,7 @@ export const SidebarProjectListElement: React.FC<Props> = (props) => {
         onBlur={handleBlur}
       />
       <NavLink
-        to={`/todos/${props.project}`}
+        to={`/Your-TODOS_v2/todos/${props.project}`}
         className={({ isActive }): string =>
           isActive ? "projects_nav_active" : ""
         }
