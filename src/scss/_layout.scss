@@ -835,6 +835,12 @@
     height: 100%;
   }
 
+  .home-page {
+    & .typewriter {
+      font-size: 1.8rem;
+    }
+  }
+
   .todos-page {
     & .no-todos-info {
       font-size: 2.2rem;
