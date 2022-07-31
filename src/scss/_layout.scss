@@ -292,7 +292,7 @@
       opacity: 0;
     }
 
-    & .typewriter {
+    .typewriter {
       width: 21ch;
       animation: typing 2s steps(21), blink 450ms step-end infinite alternate;
       white-space: nowrap;
@@ -771,7 +771,7 @@
 
       & li {
         height: 20px;
-        font-size: 0.8rem;
+        font-size: 1rem;
         padding: 3px;
 
         & .options {
@@ -829,26 +829,31 @@
     color: $red;
     font-size: 1rem;
   }
-
   .main-section {
     padding: 0.2rem;
-    height: 100%;
-  }
 
-  .home-page {
-    & .typewriter {
-      font-size: 1.8rem;
+    & .home-page {
+      height: 100%;
+
+      & .subtext {
+        font-size: 1.2rem;
+      }
+
+      & .typewriter {
+        font-size: 2rem;
+      }
     }
   }
 
   .todos-page {
     & .no-todos-info {
-      font-size: 2.2rem;
+      font-size: 1.3rem;
+      top: 50%;
     }
 
     & .todos-page__project-title {
       margin: 10px 0;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
 
     & .todos-page__todos-list {
@@ -857,7 +862,7 @@
       flex-flow: row wrap;
       justify-content: center;
       gap: 1rem;
-      padding: 20px 40px;
+      padding: 10px 15px;
       overflow-y: auto;
       overscroll-behavior-y: contain;
 
@@ -911,10 +916,16 @@
         }
       }
     }
+    .add-todo-btn {
+      top: 17px;
+      right: 5px;
+      height: 23px;
+      width: 60px;
+      font-size: 0.9rem;
+    }
   }
 
-  & .add-todo-btn {
-    width: 70px;
-    font-size: 0.9rem;
+  .modal {
+    width: 320px;
   }
 }

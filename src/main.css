@@ -798,6 +798,7 @@ h6 {
     width: 60%;
     padding: 0.1rem 0.2rem;
     overflow-y: auto;
+    overscroll-behavior-y: contain;
   }
   .sidebar__projects .sidebar__projects-list ul {
     height: 100%;
@@ -808,7 +809,7 @@ h6 {
   }
   .sidebar__projects .sidebar__projects-list li {
     height: 20px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 3px;
   }
   .sidebar__projects .sidebar__projects-list li .options {
@@ -858,13 +859,23 @@ h6 {
   }
   .main-section {
     padding: 0.2rem;
+  }
+  .main-section .home-page {
     height: 100%;
   }
+  .main-section .home-page .subtext {
+    font-size: 1.2rem;
+  }
+  .main-section .home-page .typewriter {
+    font-size: 2rem;
+  }
   .todos-page .no-todos-info {
-    font-size: 2.2rem;
+    font-size: 1.3rem;
+    top: 50%;
   }
   .todos-page .todos-page__project-title {
-    font-size: 1.4rem;
+    margin: 10px 0;
+    font-size: 1.6rem;
   }
   .todos-page .todos-page__todos-list {
     width: 100%;
@@ -872,8 +883,9 @@ h6 {
     flex-flow: row wrap;
     justify-content: center;
     gap: 1rem;
-    padding: 10px 20px;
+    padding: 10px 15px;
     overflow-y: auto;
+    overscroll-behavior-y: contain;
   }
   .todos-page .todos-page__todos-list .card {
     position: relative;
@@ -919,51 +931,14 @@ h6 {
   .todos-page .todos-page__todos-list .card .card__description::-webkit-scrollbar-button {
     height: 5px;
   }
-  .todos-page .todos-page__todos-list .card .delete-todo-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 10px;
-    right: 5px;
-    border: none;
-    outline: none;
-    background: none;
-    color: rgba(17, 45, 78, 0.5);
-  }
-  .todos-page .todos-page__todos-list .card .delete-todo-btn:hover {
-    color: #a42009;
-  }
-  .todos-page .todos-page__todos-list .card #todo-check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 13px;
-    left: 5px;
-  }
-  .todos-page .todos-page__todos-list .card #todo-check:checked ~ .card__description {
-    text-decoration: line-through;
-  }
   .todos-page .add-todo-btn {
-    width: 70px;
+    top: 17px;
+    right: 5px;
+    height: 23px;
+    width: 60px;
     font-size: 0.9rem;
   }
-  .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 2px gray;
-    gap: 5px;
-    color: #112d4e;
-    font-size: 0.7rem;
-  }
-  .footer i {
-    color: #112d4e;
-    font-size: 0.8rem;
-    transition: transform 0.3s ease-in-out;
-  }
-  .footer i:hover {
-    transform: rotateY(1turn) scale(1.2);
+  .modal {
+    width: 320px;
   }
 }/*# sourceMappingURL=main.css.map */
