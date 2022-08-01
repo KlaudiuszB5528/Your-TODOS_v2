@@ -45,6 +45,10 @@ $green: #0f762c;
   }
 }
 
+html {
+  font-size: 62.5%;
+}
+
 html,
 body {
   height: 100%;
@@ -52,7 +56,6 @@ body {
 
 body {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }

@@ -1,8 +1,9 @@
 @use "base" as *;
+
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: minmax(190px, 17%) 1fr;
+  grid-template-columns: minmax(19rem, 17%) 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header header"
@@ -15,7 +16,7 @@
   @include displayFlexCentered;
   background-color: $navy;
   padding: 0.5rem;
-  letter-spacing: 5px;
+  letter-spacing: 0.5rem;
 
   & a {
     text-decoration: none;
@@ -41,12 +42,12 @@
   color: $cold;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 185px 1fr 70px;
+  grid-template-rows: 18.5rem 1fr 7rem;
 }
 
 .sidebar__inbox {
-  padding-top: 10px;
-  border-bottom: 3px solid rgba($navy, 0.5);
+  padding-top: 1rem;
+  border-bottom: 0.3rem solid rgba($navy, 0.5);
   display: flex;
   & ul {
     @include displayFlexCentered;
@@ -57,13 +58,13 @@
     gap: 0.5rem;
 
     & li:last-child {
-      margin-bottom: 5px;
+      margin-bottom: 0.5rem;
     }
 
     & li {
       width: 95%;
       font-size: 1rem;
-      border-radius: 5px;
+      border-radius: 0.5rem;
       transition: background-color 0.2s ease-in-out;
 
       & a.navlink_active {
@@ -86,17 +87,17 @@
         text-decoration: none;
         color: $cold;
         font-size: 1.2rem;
-        padding: 5px 10px;
-        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
 
         & div {
           @include displayFlexCentered;
-          gap: 6px;
+          gap: 0.6rem;
         }
 
         & span {
-          width: 25px;
-          height: 25px;
+          width: 2.5rem;
+          height: 2.5rem;
           @include displayFlexCentered;
           border-radius: 50%;
           background-color: $navy;
@@ -110,16 +111,16 @@
 .sidebar__projects {
   display: grid;
   place-items: center;
-  padding-top: 12px;
+  padding-top: 1.2rem;
   grid-template-columns: 1fr;
-  grid-template-rows: 35px 1fr;
+  grid-template-rows: 3.5rem 1fr;
 
   & .sidebar__projects-title {
     @include displayFlexCentered;
-    padding: 10px;
+    padding: 1rem;
     width: 100%;
     font-size: 1.5rem;
-    gap: 5px;
+    gap: 0.5rem;
     color: $cold;
   }
 
@@ -133,15 +134,15 @@
 
     & ul {
       overflow-y: auto;
-      max-height: 350px;
+      max-height: 35rem;
     }
 
     & li {
       @include displayFlexSpaceBetween;
-      height: 32px;
+      height: 3.2rem;
       font-size: 1rem;
-      padding: 10px;
-      border-radius: 5px;
+      padding: 1rem;
+      border-radius: 0.5rem;
       cursor: pointer;
 
       & [data-open="false"] {
@@ -173,7 +174,7 @@
 
       & .options {
         @include displayFlexCentered;
-        gap: 5px;
+        gap: 0.5rem;
         font-size: 0.8rem;
 
         & .fa-trash-alt:hover {
@@ -197,31 +198,31 @@
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  gap: 1px;
+  gap: 0.1rem;
 }
 
 .sidebar__add-project-btn {
   @include displayFlexCentered;
   align-self: center;
-  height: 32px;
+  height: 3.2rem;
   background-color: $navy;
   color: $cold;
   font-size: 1.1rem;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   border: none;
 
   cursor: pointer;
   &:hover {
     background-color: $darkblue;
     color: $white;
-    transform: translateY(-2px);
-    box-shadow: 0px 5px 10px rgba($navy, 0.6);
+    transform: translateY(-0.2rem);
+    box-shadow: 0rem 0.5rem 1rem rgba($navy, 0.6);
   }
 
   &:active {
-    transform: translateY(-1px);
-    box-shadow: 0px 3px 6px rgba($navy, 0.6);
+    transform: translateY(-0.1rem);
+    box-shadow: 0rem 0.3rem 0.6rem rgba($navy, 0.6);
   }
 }
 
@@ -244,7 +245,7 @@
 .cancel {
   @include displayFlexCentered;
   width: 35%;
-  height: 25px;
+  height: 2.5rem;
   font-size: 0.9rem;
   background-color: $navy;
   color: $cold;
@@ -266,7 +267,7 @@
 
 .sidebar__error {
   position: absolute;
-  top: -25px;
+  top: -2.5rem;
   color: $red;
   font-size: 1.1rem;
 }
@@ -392,19 +393,19 @@
     display: grid;
     justify-content: center;
     gap: 1.2rem;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     padding: 2rem 0.5rem 1.3rem 4rem;
 
     & .card {
       position: relative;
       width: clamp(35ch, 55%, 70ch);
-      height: 210px;
+      height: 21rem;
       display: flex;
       flex-direction: column;
       padding: 0.4rem;
       background-color: $white;
-      border-radius: 10px;
-      box-shadow: 0px 0px 9px rgba($navy, 0.5);
+      border-radius: 1rem;
+      box-shadow: 0 0 0.9rem rgba($navy, 0.5);
       overflow-y: auto;
       scroll-behavior: smooth;
       scrollbar-gutter: stable both-edges;
@@ -423,12 +424,12 @@
         font-weight: bold;
         color: $navy;
         text-decoration: underline;
-        text-underline-offset: 3px;
+        text-underline-offset: 0.3rem;
       }
 
       & .card__description {
         width: 100%;
-        padding: 10px;
+        padding: 1rem;
         text-align: center;
         font-size: 1rem;
         word-wrap: break-word;
@@ -436,19 +437,19 @@
         overflow-y: auto;
 
         &::-webkit-scrollbar {
-          width: 3px;
+          width: 0.3rem;
         }
 
         &::-webkit-scrollbar-button {
-          height: 5px;
+          height: 0.5rem;
         }
       }
 
       & .delete-todo-btn {
         @include displayFlexCentered;
         position: absolute;
-        top: 10px;
-        right: 5px;
+        top: 1rem;
+        right: 0.5rem;
         border: none;
         outline: none;
         background: none;
@@ -462,8 +463,8 @@
       & #todo-check {
         @include displayFlexCentered;
         position: absolute;
-        top: 13px;
-        left: 5px;
+        top: 1.3rem;
+        left: 0.5rem;
 
         &:checked ~ .card__description {
           text-decoration: line-through;
@@ -475,25 +476,25 @@
   & .add-todo-btn {
     position: absolute;
     border: none;
-    box-shadow: 0px 0px 4px rgba($navy, 0.5);
-    bottom: 15px;
-    right: 10px;
-    height: 30px;
-    width: 90px;
+    box-shadow: 0 0 0.4rem rgba($navy, 0.5);
+    bottom: 1.5rem;
+    right: 1rem;
+    height: 3rem;
+    width: 9rem;
     background-color: $navy;
     color: $cold;
-    border-radius: 10px;
+    border-radius: 1rem;
 
     &:hover {
       background-color: $darkblue;
       color: $white;
-      box-shadow: 0px 5px 10px rgba($navy, 0.6);
-      transform: translateY(-2px);
+      box-shadow: 0px 0.5rem 1rem rgba($navy, 0.6);
+      transform: translateY(-0.2rem);
     }
 
     &:active {
-      box-shadow: 0px 3px 6px rgba($navy, 0.6);
-      transform: translateY(-1px);
+      box-shadow: 0px 0.3rem 0.6rem rgba($navy, 0.6);
+      transform: translateY(-0.1rem);
     }
   }
 }
@@ -515,11 +516,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0px 0px 10px rgba($navy, 0.7);
-  width: 360px;
-  height: 400px;
+  box-shadow: 0 0 1rem rgba($navy, 0.7);
+  width: 36rem;
+  height: 40rem;
   background-color: $cold;
-  border-radius: 10px;
+  border-radius: 1rem;
   padding: 2rem;
   z-index: 101;
   overflow: auto;
@@ -527,13 +528,13 @@
   & .modal__close-btn {
     @include displayFlexCentered;
     position: absolute;
-    top: 3px;
-    right: 3px;
+    top: 0.3rem;
+    right: 0.3rem;
     border: none;
     outline: none;
     background: none;
-    height: 20px;
-    width: 20px;
+    height: 2rem;
+    width: 2rem;
     color: rgba($navy, 0.5);
 
     &:hover {
@@ -544,15 +545,15 @@
   & .modal__submit-btn {
     @include displayFlexCentered;
     position: absolute;
-    bottom: 10px;
+    bottom: 1rem;
     left: 50%;
     font-size: 1.2rem;
     transform: translateX(-50%);
     border: none;
     outline: none;
     background: none;
-    height: 20px;
-    width: 20px;
+    height: 2rem;
+    width: 2rem;
     color: rgba($navy, 0.5);
 
     &:hover {
@@ -577,10 +578,10 @@
         & input[type="text"],
         & textarea {
           width: 100%;
-          padding: 10px;
-          border: 1px solid rgba($navy, 0.25);
+          padding: 1rem;
+          border: 0.1rem solid rgba($navy, 0.25);
           background: $white;
-          border-radius: 5px;
+          border-radius: 0.5rem;
           outline: none;
           color: $navy;
           font-size: 1rem;
@@ -590,11 +591,11 @@
           &:focus ~ label {
             color: $navy;
             transform: translateX(10px) translateY(-7px);
-            padding: 0 10px;
+            padding: 0 1rem;
             font-size: 0.7rem;
             background: $white;
-            border-left: 1px solid $navy;
-            border-right: 1px solid $navy;
+            border-left: 0.1rem solid $navy;
+            border-right: 0.1rem solid $navy;
             letter-spacing: 0.2rem;
           }
 
@@ -606,7 +607,7 @@
           & ~ label {
             position: absolute;
             left: 0;
-            padding: 10px;
+            padding: 1rem;
             pointer-events: none;
             font-size: 1rem;
             color: rgba($navy, 0.5);
@@ -617,23 +618,23 @@
 
         & textarea {
           width: 100%;
-          height: 200px;
+          height: 20rem;
           resize: none;
         }
 
         &.date {
           @include displayFlexCentered;
-          gap: 6px;
+          gap: 0.6rem;
           font-size: 1.1rem;
           color: rgba($navy, 0.6);
 
           & input {
             color: rgba($navy, 0.7);
-            padding: 5px;
-            border: 1px solid $cold;
+            padding: 0.5rem;
+            border: 0.1rem solid $cold;
 
             &:focus {
-              outline: 1px solid $navy;
+              outline: 0.1rem solid $navy;
             }
           }
         }
@@ -644,8 +645,8 @@
 
 .footer {
   @include displayFlexCentered;
-  box-shadow: 0px 0px 2px gray;
-  gap: 5px;
+  box-shadow: 0 0 0.2rem gray;
+  gap: 0.5rem;
   color: $navy;
   font-size: 0.7rem;
 
@@ -660,85 +661,55 @@
 }
 
 @media screen and (max-width: 600px) {
-  html {
-    font-size: 14px;
-  }
-  *::-webkit-scrollbar {
-    width: 6px;
-  }
-  *::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: $cold;
-  }
-  *::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: $navy;
-  }
+  * {
+    &::-webkit-scrollbar {
+      width: 0.6rem;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 1rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+    }
 
-  *::-webkit-scrollbar-button {
-    height: 5px;
-  }
-
-  #root {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .header {
-    height: 50px;
-    padding: 0.2rem;
-    letter-spacing: 8px;
-  }
-
-  .header__title {
-    gap: 0.3rem;
-    font-size: 1.1rem;
-
-    & i {
-      font-size: 1.5rem;
+    &::-webkit-scrollbar-button {
+      height: 2rem;
     }
   }
 
+  html {
+    font-size: 50%;
+    height: 100%;
+    width: 100%;
+  }
+
+  #root {
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 14rem 1fr;
+  }
+
   .sidebar {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 40px 160px 40px;
-    position: relative;
+    grid-template-rows: 13rem 1fr 6rem;
   }
 
   .sidebar__inbox {
-    padding-top: 0px;
-    border-bottom: 2px solid rgba($navy, 0.5);
     & ul {
-      width: 100%;
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      gap: 0.5rem;
-      padding: 0 10px;
-
       & li:last-child {
-        margin-bottom: 0px;
+        margin-bottom: 0.3rem;
       }
 
       & li {
-        width: 60%;
-        & a {
-          justify-content: center;
-          gap: 0.5rem;
-          color: $cold;
-          font-size: 0.9rem;
-          padding: 2px 4px;
+        font-size: 1rem;
 
-          & div {
-            @include displayFlexCentered;
-            gap: 6px;
-          }
+        & a {
+          font-size: 1.1rem;
+          padding: 0.4rem 0.8rem;
+          border-radius: 0.5rem;
 
           & span {
-            font-size: 0.6rem;
-            width: 16px;
-            height: 16px;
+            width: 2rem;
+            height: 2rem;
           }
         }
       }
@@ -746,186 +717,135 @@
   }
 
   .sidebar__projects {
-    padding-top: 5px;
-    grid-template-rows: 16px 1fr;
-
-    & .sidebar__projects-title {
-      padding: 5px;
-      font-size: 1rem;
-      font-weight: normal;
-    }
-
     & .sidebar__projects-list {
-      width: 60%;
-      padding: 0.1rem 0.2rem;
-      overflow-y: auto;
-      overscroll-behavior-y: contain;
-
       & ul {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-        overflow-y: auto;
-      }
-
-      & li {
-        height: 20px;
-        font-size: 1rem;
-        padding: 3px;
-
-        & .options {
-          font-size: 0.7rem;
-        }
+        max-height: 35rem;
       }
     }
-  }
 
-  .sidebar__addProject_container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-flow: row wrap;
-  }
-
-  .sidebar__add-project-btn {
-    height: 20px;
-    font-size: 1rem;
-    padding: 2px 4px;
-    margin-bottom: 1px;
-
-    &:active {
-      transform: translateY(-1px);
-      box-shadow: 0px 3px 6px rgba($navy, 0.6);
+    .sidebar__error {
+      position: absolute;
+      top: -2.5rem;
+      color: $red;
+      font-size: 1.1rem;
     }
   }
 
-  .sidebar__add-project-input,
-  .sidebar__edit-project-input {
-    font-size: 0.8rem;
-    height: 19px;
-    width: 60%;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  .sidebar__edit-project-input {
-    font-size: 0.9rem;
-    width: 90%;
-  }
-
-  .confirm,
-  .cancel {
-    display: none;
-  }
-
-  .sidebar__error {
-    position: absolute;
-    z-index: 1000;
-    top: 0px;
-    color: $red;
-    font-size: 1rem;
-  }
   .main-section {
-    padding: 0.2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     & .home-page {
-      height: 100%;
-
-      & .subtext {
-        font-size: 1.2rem;
-      }
-
-      & .typewriter {
-        font-size: 2rem;
+      .typewriter {
+        border-right: 0.3rem solid;
+        font-size: 1.9rem;
       }
     }
   }
 
   .todos-page {
-    & .no-todos-info {
-      font-size: 1.3rem;
-      top: 50%;
+    & .project.title {
+      padding-right: 2rem;
     }
 
-    & .todos-page__project-title {
-      margin: 10px 0;
-      font-size: 1.6rem;
+    & .no-todos-info {
+      text-align: center;
+      left: 55%;
+      top: 50%;
+      font-size: 1.8rem;
+      width: 80%;
     }
 
     & .todos-page__todos-list {
       width: 100%;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      gap: 1rem;
-      padding: 10px 15px;
-      overflow-y: auto;
-      overscroll-behavior-y: contain;
+      display: grid;
+      place-items: center;
+      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+      padding: 1rem 2rem;
+    }
 
-      & .card {
-        position: relative;
-        width: clamp(35ch, 55%, 70ch);
-        height: 190px;
-        display: flex;
-        flex-direction: column;
-        padding: 0.4rem;
-        background-color: $white;
-        border-radius: 10px;
-        box-shadow: 0px 0px 9px rgba($navy, 0.5);
-        overflow-y: auto;
-        scroll-behavior: smooth;
-        scrollbar-gutter: stable both-edges;
+    & .add-todo-btn {
+      top: 0.1rem;
+      right: 0.2rem;
+      height: 2rem;
+      width: 5rem;
+      font-size: 1rem;
+    }
+  }
+  .modal {
+    & .modal__content {
+      & form {
+        & .modal__input-box {
+          & input[type="text"],
+          & textarea {
+            font-size: 1.2rem;
+            transition: 0.5s;
 
-        & .dueDate {
-          font-size: bold;
-          color: rgba($navy, 0.6);
-          width: 100%;
-          text-align: center;
-        }
+            &:valid ~ label,
+            &:focus ~ label {
+              color: $navy;
+              transform: translateX(1rem) translateY(-0.7rem);
+              padding: 0 1rem;
+              font-size: 0.8rem;
+              background: $white;
+              border-left: 0.1rem solid $navy;
+              border-right: 0.1rem solid $navy;
+              letter-spacing: 0.2rem;
+            }
 
-        & .card__title {
-          width: 100%;
-          text-align: center;
-          font-size: 1.2rem;
-          font-weight: bold;
-          color: $navy;
-          text-decoration: underline;
-          text-underline-offset: 3px;
-        }
+            &:valid,
+            &:focus {
+              border: 0.1rem solid $navy;
+            }
 
-        & .card__description {
-          width: 100%;
-          padding: 10px;
-          text-align: center;
-          font-size: 1rem;
-          word-wrap: break-word;
-          color: $darkblue;
-          overflow-y: auto;
-
-          &::-webkit-scrollbar {
-            width: 3px;
+            & ~ label {
+              position: absolute;
+              left: 0;
+              padding: 1rem;
+              pointer-events: none;
+              font-size: 1rem;
+              color: rgba($navy, 0.5);
+              text-transform: uppercase;
+              transition: 0.5s;
+            }
           }
 
-          &::-webkit-scrollbar-button {
-            height: 5px;
+          &.date {
+            @include displayFlexCentered;
+            gap: 0.6rem;
+            font-size: 1.3rem;
+            color: rgba($navy, 0.6);
+
+            & input {
+              color: rgba($navy, 0.7);
+              padding: 0.4rem;
+              border: 0.1rem solid $cold;
+
+              &:focus {
+                outline: 0.1rem solid $navy;
+              }
+            }
           }
         }
       }
     }
-    .add-todo-btn {
-      top: 17px;
-      right: 5px;
-      height: 23px;
-      width: 60px;
-      font-size: 0.9rem;
-    }
   }
 
-  .modal {
-    width: 320px;
+  .footer {
+    @include displayFlexCentered;
+    box-shadow: 0 0 0.2rem gray;
+    gap: 0.3rem;
+    color: $navy;
+    font-size: 0.8rem;
+
+    & i {
+      color: $navy;
+      font-size: 0.9rem;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: rotateY(1turn) scale(1.2);
+      }
+    }
   }
 }

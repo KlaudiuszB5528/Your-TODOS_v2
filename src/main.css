@@ -23,6 +23,10 @@
   height: 20px;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 html,
 body {
   height: 100%;
@@ -30,7 +34,6 @@ body {
 
 body {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -60,7 +63,7 @@ h6 {
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: minmax(190px, 17%) 1fr;
+  grid-template-columns: minmax(19rem, 17%) 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "header header" "sidebar main" "sidebar footer";
 }
@@ -72,7 +75,7 @@ h6 {
   align-items: center;
   background-color: #112d4e;
   padding: 0.5rem;
-  letter-spacing: 5px;
+  letter-spacing: 0.5rem;
 }
 .header a {
   text-decoration: none;
@@ -98,12 +101,12 @@ h6 {
   color: #dbe2ef;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 185px 1fr 70px;
+  grid-template-rows: 18.5rem 1fr 7rem;
 }
 
 .sidebar__inbox {
-  padding-top: 10px;
-  border-bottom: 3px solid rgba(17, 45, 78, 0.5);
+  padding-top: 1rem;
+  border-bottom: 0.3rem solid rgba(17, 45, 78, 0.5);
   display: flex;
 }
 .sidebar__inbox ul {
@@ -117,12 +120,12 @@ h6 {
   gap: 0.5rem;
 }
 .sidebar__inbox ul li:last-child {
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 .sidebar__inbox ul li {
   width: 95%;
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   transition: background-color 0.2s ease-in-out;
 }
 .sidebar__inbox ul li a.navlink_active {
@@ -144,18 +147,18 @@ h6 {
   text-decoration: none;
   color: #dbe2ef;
   font-size: 1.2rem;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 .sidebar__inbox ul li a div {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: 0.6rem;
 }
 .sidebar__inbox ul li a span {
-  width: 25px;
-  height: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,18 +170,18 @@ h6 {
 .sidebar__projects {
   display: grid;
   place-items: center;
-  padding-top: 12px;
+  padding-top: 1.2rem;
   grid-template-columns: 1fr;
-  grid-template-rows: 35px 1fr;
+  grid-template-rows: 3.5rem 1fr;
 }
 .sidebar__projects .sidebar__projects-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 1rem;
   width: 100%;
   font-size: 1.5rem;
-  gap: 5px;
+  gap: 0.5rem;
   color: #dbe2ef;
 }
 .sidebar__projects .sidebar__projects-list {
@@ -191,16 +194,16 @@ h6 {
 }
 .sidebar__projects .sidebar__projects-list ul {
   overflow-y: auto;
-  max-height: 350px;
+  max-height: 35rem;
 }
 .sidebar__projects .sidebar__projects-list li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 32px;
+  height: 3.2rem;
   font-size: 1rem;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 1rem;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 .sidebar__projects .sidebar__projects-list li [data-open=false] {
@@ -228,7 +231,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 0.5rem;
   font-size: 0.8rem;
 }
 .sidebar__projects .sidebar__projects-list li .options .fa-trash-alt:hover {
@@ -246,7 +249,7 @@ h6 {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  gap: 1px;
+  gap: 0.1rem;
 }
 
 .sidebar__add-project-btn {
@@ -254,24 +257,24 @@ h6 {
   justify-content: center;
   align-items: center;
   align-self: center;
-  height: 32px;
+  height: 3.2rem;
   background-color: #112d4e;
   color: #dbe2ef;
   font-size: 1.1rem;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   border: none;
   cursor: pointer;
 }
 .sidebar__add-project-btn:hover {
   background-color: #03396c;
   color: #f9f7f7;
-  transform: translateY(-2px);
-  box-shadow: 0px 5px 10px rgba(17, 45, 78, 0.6);
+  transform: translateY(-0.2rem);
+  box-shadow: 0rem 0.5rem 1rem rgba(17, 45, 78, 0.6);
 }
 .sidebar__add-project-btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0px 3px 6px rgba(17, 45, 78, 0.6);
+  transform: translateY(-0.1rem);
+  box-shadow: 0rem 0.3rem 0.6rem rgba(17, 45, 78, 0.6);
 }
 
 .sidebar__add-project-input,
@@ -295,7 +298,7 @@ h6 {
   justify-content: center;
   align-items: center;
   width: 35%;
-  height: 25px;
+  height: 2.5rem;
   font-size: 0.9rem;
   background-color: #112d4e;
   color: #dbe2ef;
@@ -315,7 +318,7 @@ h6 {
 
 .sidebar__error {
   position: absolute;
-  top: -25px;
+  top: -2.5rem;
   color: #a42009;
   font-size: 1.1rem;
 }
@@ -463,19 +466,19 @@ h6 {
   display: grid;
   justify-content: center;
   gap: 1.2rem;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   padding: 2rem 0.5rem 1.3rem 4rem;
 }
 .todos-page .todos-page__todos-list .card {
   position: relative;
   width: clamp(35ch, 55%, 70ch);
-  height: 210px;
+  height: 21rem;
   display: flex;
   flex-direction: column;
   padding: 0.4rem;
   background-color: #f9f7f7;
-  border-radius: 10px;
-  box-shadow: 0px 0px 9px rgba(17, 45, 78, 0.5);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.9rem rgba(17, 45, 78, 0.5);
   overflow-y: auto;
   scroll-behavior: smooth;
   scrollbar-gutter: stable both-edges;
@@ -493,11 +496,11 @@ h6 {
   font-weight: bold;
   color: #112d4e;
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 0.3rem;
 }
 .todos-page .todos-page__todos-list .card .card__description {
   width: 100%;
-  padding: 10px;
+  padding: 1rem;
   text-align: center;
   font-size: 1rem;
   word-wrap: break-word;
@@ -505,18 +508,18 @@ h6 {
   overflow-y: auto;
 }
 .todos-page .todos-page__todos-list .card .card__description::-webkit-scrollbar {
-  width: 3px;
+  width: 0.3rem;
 }
 .todos-page .todos-page__todos-list .card .card__description::-webkit-scrollbar-button {
-  height: 5px;
+  height: 0.5rem;
 }
 .todos-page .todos-page__todos-list .card .delete-todo-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 10px;
-  right: 5px;
+  top: 1rem;
+  right: 0.5rem;
   border: none;
   outline: none;
   background: none;
@@ -530,8 +533,8 @@ h6 {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 13px;
-  left: 5px;
+  top: 1.3rem;
+  left: 0.5rem;
 }
 .todos-page .todos-page__todos-list .card #todo-check:checked ~ .card__description {
   text-decoration: line-through;
@@ -539,24 +542,24 @@ h6 {
 .todos-page .add-todo-btn {
   position: absolute;
   border: none;
-  box-shadow: 0px 0px 4px rgba(17, 45, 78, 0.5);
-  bottom: 15px;
-  right: 10px;
-  height: 30px;
-  width: 90px;
+  box-shadow: 0 0 0.4rem rgba(17, 45, 78, 0.5);
+  bottom: 1.5rem;
+  right: 1rem;
+  height: 3rem;
+  width: 9rem;
   background-color: #112d4e;
   color: #dbe2ef;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 .todos-page .add-todo-btn:hover {
   background-color: #03396c;
   color: #f9f7f7;
-  box-shadow: 0px 5px 10px rgba(17, 45, 78, 0.6);
-  transform: translateY(-2px);
+  box-shadow: 0px 0.5rem 1rem rgba(17, 45, 78, 0.6);
+  transform: translateY(-0.2rem);
 }
 .todos-page .add-todo-btn:active {
-  box-shadow: 0px 3px 6px rgba(17, 45, 78, 0.6);
-  transform: translateY(-1px);
+  box-shadow: 0px 0.3rem 0.6rem rgba(17, 45, 78, 0.6);
+  transform: translateY(-0.1rem);
 }
 
 .overlay {
@@ -576,11 +579,11 @@ h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0px 0px 10px rgba(17, 45, 78, 0.7);
-  width: 360px;
-  height: 400px;
+  box-shadow: 0 0 1rem rgba(17, 45, 78, 0.7);
+  width: 36rem;
+  height: 40rem;
   background-color: #dbe2ef;
-  border-radius: 10px;
+  border-radius: 1rem;
   padding: 2rem;
   z-index: 101;
   overflow: auto;
@@ -590,13 +593,13 @@ h6 {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 3px;
-  right: 3px;
+  top: 0.3rem;
+  right: 0.3rem;
   border: none;
   outline: none;
   background: none;
-  height: 20px;
-  width: 20px;
+  height: 2rem;
+  width: 2rem;
   color: rgba(17, 45, 78, 0.5);
 }
 .modal .modal__close-btn:hover {
@@ -607,15 +610,15 @@ h6 {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 10px;
+  bottom: 1rem;
   left: 50%;
   font-size: 1.2rem;
   transform: translateX(-50%);
   border: none;
   outline: none;
   background: none;
-  height: 20px;
-  width: 20px;
+  height: 2rem;
+  width: 2rem;
   color: rgba(17, 45, 78, 0.5);
 }
 .modal .modal__submit-btn:hover {
@@ -637,10 +640,10 @@ h6 {
 }
 .modal .modal__content form .modal__input-box input[type=text], .modal .modal__content form .modal__input-box textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid rgba(17, 45, 78, 0.25);
+  padding: 1rem;
+  border: 0.1rem solid rgba(17, 45, 78, 0.25);
   background: #f9f7f7;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   outline: none;
   color: #112d4e;
   font-size: 1rem;
@@ -649,11 +652,11 @@ h6 {
 .modal .modal__content form .modal__input-box input[type=text]:valid ~ label, .modal .modal__content form .modal__input-box input[type=text]:focus ~ label, .modal .modal__content form .modal__input-box textarea:valid ~ label, .modal .modal__content form .modal__input-box textarea:focus ~ label {
   color: #112d4e;
   transform: translateX(10px) translateY(-7px);
-  padding: 0 10px;
+  padding: 0 1rem;
   font-size: 0.7rem;
   background: #f9f7f7;
-  border-left: 1px solid #112d4e;
-  border-right: 1px solid #112d4e;
+  border-left: 0.1rem solid #112d4e;
+  border-right: 0.1rem solid #112d4e;
   letter-spacing: 0.2rem;
 }
 .modal .modal__content form .modal__input-box input[type=text]:valid, .modal .modal__content form .modal__input-box input[type=text]:focus, .modal .modal__content form .modal__input-box textarea:valid, .modal .modal__content form .modal__input-box textarea:focus {
@@ -662,7 +665,7 @@ h6 {
 .modal .modal__content form .modal__input-box input[type=text] ~ label, .modal .modal__content form .modal__input-box textarea ~ label {
   position: absolute;
   left: 0;
-  padding: 10px;
+  padding: 1rem;
   pointer-events: none;
   font-size: 1rem;
   color: rgba(17, 45, 78, 0.5);
@@ -671,32 +674,32 @@ h6 {
 }
 .modal .modal__content form .modal__input-box textarea {
   width: 100%;
-  height: 200px;
+  height: 20rem;
   resize: none;
 }
 .modal .modal__content form .modal__input-box.date {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: 0.6rem;
   font-size: 1.1rem;
   color: rgba(17, 45, 78, 0.6);
 }
 .modal .modal__content form .modal__input-box.date input {
   color: rgba(17, 45, 78, 0.7);
-  padding: 5px;
-  border: 1px solid #dbe2ef;
+  padding: 0.5rem;
+  border: 0.1rem solid #dbe2ef;
 }
 .modal .modal__content form .modal__input-box.date input:focus {
-  outline: 1px solid #112d4e;
+  outline: 0.1rem solid #112d4e;
 }
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 2px gray;
-  gap: 5px;
+  box-shadow: 0 0 0.2rem gray;
+  gap: 0.5rem;
   color: #112d4e;
   font-size: 0.7rem;
 }
@@ -710,235 +713,146 @@ h6 {
 }
 
 @media screen and (max-width: 600px) {
-  html {
-    font-size: 14px;
-  }
   *::-webkit-scrollbar {
-    width: 6px;
+    width: 0.6rem;
   }
   *::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: #dbe2ef;
+    border-radius: 1rem;
   }
   *::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #112d4e;
+    border-radius: 1rem;
   }
   *::-webkit-scrollbar-button {
-    height: 5px;
+    height: 2rem;
+  }
+  html {
+    font-size: 50%;
+    height: 100%;
+    width: 100%;
   }
   #root {
-    display: flex;
-    flex-direction: column;
     height: 100%;
-  }
-  .header {
-    height: 50px;
-    padding: 0.2rem;
-    letter-spacing: 8px;
-  }
-  .header__title {
-    gap: 0.3rem;
-    font-size: 1.1rem;
-  }
-  .header__title i {
-    font-size: 1.5rem;
+    width: 100%;
+    grid-template-columns: 14rem 1fr;
   }
   .sidebar {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 40px 160px 40px;
-    position: relative;
-  }
-  .sidebar__inbox {
-    padding-top: 0px;
-    border-bottom: 2px solid rgba(17, 45, 78, 0.5);
-  }
-  .sidebar__inbox ul {
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 0.5rem;
-    padding: 0 10px;
+    grid-template-rows: 13rem 1fr 6rem;
   }
   .sidebar__inbox ul li:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0.3rem;
   }
   .sidebar__inbox ul li {
-    width: 60%;
+    font-size: 1rem;
   }
   .sidebar__inbox ul li a {
-    justify-content: center;
-    gap: 0.5rem;
-    color: #dbe2ef;
-    font-size: 0.9rem;
-    padding: 2px 4px;
-  }
-  .sidebar__inbox ul li a div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
+    font-size: 1.1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
   }
   .sidebar__inbox ul li a span {
-    font-size: 0.6rem;
-    width: 16px;
-    height: 16px;
-  }
-  .sidebar__projects {
-    padding-top: 5px;
-    grid-template-rows: 16px 1fr;
-  }
-  .sidebar__projects .sidebar__projects-title {
-    padding: 5px;
-    font-size: 1rem;
-    font-weight: normal;
-  }
-  .sidebar__projects .sidebar__projects-list {
-    width: 60%;
-    padding: 0.1rem 0.2rem;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
+    width: 2rem;
+    height: 2rem;
   }
   .sidebar__projects .sidebar__projects-list ul {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    overflow-y: auto;
+    max-height: 35rem;
   }
-  .sidebar__projects .sidebar__projects-list li {
-    height: 20px;
-    font-size: 1rem;
-    padding: 3px;
-  }
-  .sidebar__projects .sidebar__projects-list li .options {
-    font-size: 0.7rem;
-  }
-  .sidebar__addProject_container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-flow: row wrap;
-  }
-  .sidebar__add-project-btn {
-    height: 20px;
-    font-size: 1rem;
-    padding: 2px 4px;
-    margin-bottom: 1px;
-  }
-  .sidebar__add-project-btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0px 3px 6px rgba(17, 45, 78, 0.6);
-  }
-  .sidebar__add-project-input,
-.sidebar__edit-project-input {
-    font-size: 0.8rem;
-    height: 19px;
-    width: 60%;
-  }
-  .sidebar__add-project-input:focus,
-.sidebar__edit-project-input:focus {
-    outline: none;
-  }
-  .sidebar__edit-project-input {
-    font-size: 0.9rem;
-    width: 90%;
-  }
-  .confirm,
-.cancel {
-    display: none;
-  }
-  .sidebar__error {
+  .sidebar__projects .sidebar__error {
     position: absolute;
-    z-index: 1000;
-    top: 0px;
+    top: -2.5rem;
     color: #a42009;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .main-section {
-    padding: 0.2rem;
-  }
-  .main-section .home-page {
-    height: 100%;
-  }
-  .main-section .home-page .subtext {
-    font-size: 1.2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .main-section .home-page .typewriter {
-    font-size: 2rem;
+    border-right: 0.3rem solid;
+    font-size: 1.9rem;
+  }
+  .todos-page .project.title {
+    padding-right: 2rem;
   }
   .todos-page .no-todos-info {
-    font-size: 1.3rem;
+    text-align: center;
+    left: 55%;
     top: 50%;
-  }
-  .todos-page .todos-page__project-title {
-    margin: 10px 0;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    width: 80%;
   }
   .todos-page .todos-page__todos-list {
     width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 10px 15px;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
-  }
-  .todos-page .todos-page__todos-list .card {
-    position: relative;
-    width: clamp(35ch, 55%, 70ch);
-    height: 190px;
-    display: flex;
-    flex-direction: column;
-    padding: 0.4rem;
-    background-color: #f9f7f7;
-    border-radius: 10px;
-    box-shadow: 0px 0px 9px rgba(17, 45, 78, 0.5);
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    scrollbar-gutter: stable both-edges;
-  }
-  .todos-page .todos-page__todos-list .card .dueDate {
-    font-size: bold;
-    color: rgba(17, 45, 78, 0.6);
-    width: 100%;
-    text-align: center;
-  }
-  .todos-page .todos-page__todos-list .card .card__title {
-    width: 100%;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #112d4e;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-  .todos-page .todos-page__todos-list .card .card__description {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    font-size: 1rem;
-    word-wrap: break-word;
-    color: #03396c;
-    overflow-y: auto;
-  }
-  .todos-page .todos-page__todos-list .card .card__description::-webkit-scrollbar {
-    width: 3px;
-  }
-  .todos-page .todos-page__todos-list .card .card__description::-webkit-scrollbar-button {
-    height: 5px;
+    display: grid;
+    place-items: center;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    padding: 1rem 2rem;
   }
   .todos-page .add-todo-btn {
-    top: 17px;
-    right: 5px;
-    height: 23px;
-    width: 60px;
-    font-size: 0.9rem;
+    top: 0.1rem;
+    right: 0.2rem;
+    height: 2rem;
+    width: 5rem;
+    font-size: 1rem;
   }
-  .modal {
-    width: 320px;
+  .modal .modal__content form .modal__input-box input[type=text], .modal .modal__content form .modal__input-box textarea {
+    font-size: 1.2rem;
+    transition: 0.5s;
+  }
+  .modal .modal__content form .modal__input-box input[type=text]:valid ~ label, .modal .modal__content form .modal__input-box input[type=text]:focus ~ label, .modal .modal__content form .modal__input-box textarea:valid ~ label, .modal .modal__content form .modal__input-box textarea:focus ~ label {
+    color: #112d4e;
+    transform: translateX(1rem) translateY(-0.7rem);
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    background: #f9f7f7;
+    border-left: 0.1rem solid #112d4e;
+    border-right: 0.1rem solid #112d4e;
+    letter-spacing: 0.2rem;
+  }
+  .modal .modal__content form .modal__input-box input[type=text]:valid, .modal .modal__content form .modal__input-box input[type=text]:focus, .modal .modal__content form .modal__input-box textarea:valid, .modal .modal__content form .modal__input-box textarea:focus {
+    border: 0.1rem solid #112d4e;
+  }
+  .modal .modal__content form .modal__input-box input[type=text] ~ label, .modal .modal__content form .modal__input-box textarea ~ label {
+    position: absolute;
+    left: 0;
+    padding: 1rem;
+    pointer-events: none;
+    font-size: 1rem;
+    color: rgba(17, 45, 78, 0.5);
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  .modal .modal__content form .modal__input-box.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.3rem;
+    color: rgba(17, 45, 78, 0.6);
+  }
+  .modal .modal__content form .modal__input-box.date input {
+    color: rgba(17, 45, 78, 0.7);
+    padding: 0.4rem;
+    border: 0.1rem solid #dbe2ef;
+  }
+  .modal .modal__content form .modal__input-box.date input:focus {
+    outline: 0.1rem solid #112d4e;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0.2rem gray;
+    gap: 0.3rem;
+    color: #112d4e;
+    font-size: 0.8rem;
+  }
+  .footer i {
+    color: #112d4e;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  .footer i:hover {
+    transform: rotateY(1turn) scale(1.2);
   }
 }/*# sourceMappingURL=main.css.map */
