@@ -3,7 +3,7 @@
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: minmax(19rem, 17%) 1fr;
+  grid-template-columns: minmax(22rem, 17%) 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header header"
@@ -26,13 +26,13 @@
 .header__title {
   @include displayFlexCentered;
   gap: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: $cold;
   text-transform: uppercase;
 
   & i {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
@@ -63,7 +63,6 @@
 
     & li {
       width: 95%;
-      font-size: 1rem;
       border-radius: 0.5rem;
       transition: background-color 0.2s ease-in-out;
 
@@ -86,7 +85,7 @@
         @include displayFlexSpaceBetween;
         text-decoration: none;
         color: $cold;
-        font-size: 1.2rem;
+        font-size: 1.7rem;
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
 
@@ -119,7 +118,7 @@
     @include displayFlexCentered;
     padding: 1rem;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     gap: 0.5rem;
     color: $cold;
   }
@@ -140,7 +139,7 @@
     & li {
       @include displayFlexSpaceBetween;
       height: 3.2rem;
-      font-size: 1rem;
+      font-size: 1.6rem;
       padding: 1rem;
       border-radius: 0.5rem;
       cursor: pointer;
@@ -175,7 +174,7 @@
       & .options {
         @include displayFlexCentered;
         gap: 0.5rem;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
 
         & .fa-trash-alt:hover {
           color: $red;
@@ -207,7 +206,7 @@
   height: 3.2rem;
   background-color: $navy;
   color: $cold;
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   border: none;
@@ -228,7 +227,7 @@
 
 .sidebar__add-project-input,
 .sidebar__edit-project-input {
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   width: 70%;
 
   &:focus {
@@ -237,7 +236,7 @@
 }
 
 .sidebar__edit-project-input {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   width: 100%;
 }
 
@@ -246,7 +245,7 @@
   @include displayFlexCentered;
   width: 35%;
   height: 2.5rem;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   background-color: $navy;
   color: $cold;
   border: none;
@@ -269,7 +268,7 @@
   position: absolute;
   top: -2.5rem;
   color: $red;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .main-section {
@@ -384,7 +383,7 @@
     text-decoration: underline;
     text-underline-offset: 3px;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     color: $navy;
   }
 
@@ -398,7 +397,7 @@
 
     & .card {
       position: relative;
-      width: clamp(35ch, 55%, 70ch);
+      width: clamp(45ch, 60%, 90ch);
       height: 21rem;
       display: flex;
       flex-direction: column;
@@ -420,7 +419,7 @@
       & .card__title {
         width: 100%;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         font-weight: bold;
         color: $navy;
         text-decoration: underline;
@@ -431,7 +430,7 @@
         width: 100%;
         padding: 1rem;
         text-align: center;
-        font-size: 1rem;
+        font-size: 1.3rem;
         word-wrap: break-word;
         color: $darkblue;
         overflow-y: auto;
@@ -478,6 +477,7 @@
     border: none;
     box-shadow: 0 0 0.4rem rgba($navy, 0.5);
     bottom: 1.5rem;
+    font-size: 1.5rem;
     right: 1rem;
     height: 3rem;
     width: 9rem;
@@ -660,7 +660,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   * {
     &::-webkit-scrollbar {
       width: 0.6rem;
@@ -686,7 +686,7 @@
   #root {
     height: 100%;
     width: 100%;
-    grid-template-columns: 14rem 1fr;
+    grid-template-columns: 15rem 1fr;
   }
 
   .sidebar {
@@ -700,8 +700,6 @@
       }
 
       & li {
-        font-size: 1rem;
-
         & a {
           font-size: 1.1rem;
           padding: 0.4rem 0.8rem;
@@ -717,18 +715,72 @@
   }
 
   .sidebar__projects {
-    & .sidebar__projects-list {
-      & ul {
-        max-height: 35rem;
-      }
+    & .sidebar__projects-title {
+      font-size: 1.6rem;
     }
 
-    .sidebar__error {
-      position: absolute;
-      top: -2.5rem;
-      color: $red;
-      font-size: 1.1rem;
+    & .sidebar__projects-list {
+      & li {
+        font-size: 1rem;
+
+        & .options {
+          @include displayFlexCentered;
+          gap: 0.5rem;
+          font-size: 1rem;
+        }
+      }
     }
+  }
+
+  .sidebar__add-project-btn {
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+
+  .sidebar__add-project-input,
+  .sidebar__edit-project-input {
+    font-size: 1.3rem;
+    width: 70%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .sidebar__edit-project-input {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+
+  .confirm,
+  .cancel {
+    @include displayFlexCentered;
+    width: 35%;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    background-color: $navy;
+    color: $cold;
+    border: none;
+    text-transform: uppercase;
+  }
+
+  .cancel {
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+
+  .confirm:hover {
+    background-color: $green;
+    color: $white;
+  }
+
+  .sidebar__error {
+    position: absolute;
+    top: -2rem;
+    color: $red;
+    font-size: 1.3rem;
   }
 
   .main-section {
@@ -763,10 +815,14 @@
       gap: 1.2rem;
       grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
       padding: 1rem 2rem;
+
+      & .card {
+        width: clamp(30ch, 50%, 60ch);
+      }
     }
 
     & .add-todo-btn {
-      top: 0.1rem;
+      top: 0.7rem;
       right: 0.2rem;
       height: 2rem;
       width: 5rem;

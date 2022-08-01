@@ -63,7 +63,7 @@ h6 {
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: minmax(19rem, 17%) 1fr;
+  grid-template-columns: minmax(22rem, 17%) 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "header header" "sidebar main" "sidebar footer";
 }
@@ -86,13 +86,13 @@ h6 {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #dbe2ef;
   text-transform: uppercase;
 }
 .header__title i {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .sidebar {
@@ -124,7 +124,6 @@ h6 {
 }
 .sidebar__inbox ul li {
   width: 95%;
-  font-size: 1rem;
   border-radius: 0.5rem;
   transition: background-color 0.2s ease-in-out;
 }
@@ -146,7 +145,7 @@ h6 {
   align-items: center;
   text-decoration: none;
   color: #dbe2ef;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 }
@@ -180,7 +179,7 @@ h6 {
   align-items: center;
   padding: 1rem;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   gap: 0.5rem;
   color: #dbe2ef;
 }
@@ -201,7 +200,7 @@ h6 {
   justify-content: space-between;
   align-items: center;
   height: 3.2rem;
-  font-size: 1rem;
+  font-size: 1.6rem;
   padding: 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -232,7 +231,7 @@ h6 {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 .sidebar__projects .sidebar__projects-list li .options .fa-trash-alt:hover {
   color: #a42009;
@@ -260,7 +259,7 @@ h6 {
   height: 3.2rem;
   background-color: #112d4e;
   color: #dbe2ef;
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   border: none;
@@ -279,7 +278,7 @@ h6 {
 
 .sidebar__add-project-input,
 .sidebar__edit-project-input {
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   width: 70%;
 }
 .sidebar__add-project-input:focus,
@@ -288,7 +287,7 @@ h6 {
 }
 
 .sidebar__edit-project-input {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   width: 100%;
 }
 
@@ -299,7 +298,7 @@ h6 {
   align-items: center;
   width: 35%;
   height: 2.5rem;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   background-color: #112d4e;
   color: #dbe2ef;
   border: none;
@@ -320,7 +319,7 @@ h6 {
   position: absolute;
   top: -2.5rem;
   color: #a42009;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .main-section {
@@ -458,7 +457,7 @@ h6 {
   text-decoration: underline;
   text-underline-offset: 3px;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   color: #112d4e;
 }
 .todos-page .todos-page__todos-list {
@@ -471,7 +470,7 @@ h6 {
 }
 .todos-page .todos-page__todos-list .card {
   position: relative;
-  width: clamp(35ch, 55%, 70ch);
+  width: clamp(45ch, 60%, 90ch);
   height: 21rem;
   display: flex;
   flex-direction: column;
@@ -492,7 +491,7 @@ h6 {
 .todos-page .todos-page__todos-list .card .card__title {
   width: 100%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #112d4e;
   text-decoration: underline;
@@ -502,7 +501,7 @@ h6 {
   width: 100%;
   padding: 1rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
   word-wrap: break-word;
   color: #03396c;
   overflow-y: auto;
@@ -544,6 +543,7 @@ h6 {
   border: none;
   box-shadow: 0 0 0.4rem rgba(17, 45, 78, 0.5);
   bottom: 1.5rem;
+  font-size: 1.5rem;
   right: 1rem;
   height: 3rem;
   width: 9rem;
@@ -712,7 +712,7 @@ h6 {
   transform: rotateY(1turn) scale(1.2);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   *::-webkit-scrollbar {
     width: 0.6rem;
   }
@@ -733,16 +733,13 @@ h6 {
   #root {
     height: 100%;
     width: 100%;
-    grid-template-columns: 14rem 1fr;
+    grid-template-columns: 15rem 1fr;
   }
   .sidebar {
     grid-template-rows: 13rem 1fr 6rem;
   }
   .sidebar__inbox ul li:last-child {
     margin-bottom: 0.3rem;
-  }
-  .sidebar__inbox ul li {
-    font-size: 1rem;
   }
   .sidebar__inbox ul li a {
     font-size: 1.1rem;
@@ -753,14 +750,62 @@ h6 {
     width: 2rem;
     height: 2rem;
   }
-  .sidebar__projects .sidebar__projects-list ul {
-    max-height: 35rem;
+  .sidebar__projects .sidebar__projects-title {
+    font-size: 1.6rem;
   }
-  .sidebar__projects .sidebar__error {
+  .sidebar__projects .sidebar__projects-list li {
+    font-size: 1rem;
+  }
+  .sidebar__projects .sidebar__projects-list li .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  .sidebar__add-project-btn {
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+  .sidebar__add-project-input,
+.sidebar__edit-project-input {
+    font-size: 1.3rem;
+    width: 70%;
+  }
+  .sidebar__add-project-input:focus,
+.sidebar__edit-project-input:focus {
+    outline: none;
+  }
+  .sidebar__edit-project-input {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+  .confirm,
+.cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    background-color: #112d4e;
+    color: #dbe2ef;
+    border: none;
+    text-transform: uppercase;
+  }
+  .cancel:hover {
+    background-color: #a42009;
+    color: #f9f7f7;
+  }
+  .confirm:hover {
+    background-color: #0f762c;
+    color: #f9f7f7;
+  }
+  .sidebar__error {
     position: absolute;
-    top: -2.5rem;
+    top: -2rem;
     color: #a42009;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   .main-section {
     overflow-y: auto;
@@ -788,8 +833,11 @@ h6 {
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     padding: 1rem 2rem;
   }
+  .todos-page .todos-page__todos-list .card {
+    width: clamp(30ch, 50%, 60ch);
+  }
   .todos-page .add-todo-btn {
-    top: 0.1rem;
+    top: 0.7rem;
     right: 0.2rem;
     height: 2rem;
     width: 5rem;
