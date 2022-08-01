@@ -417,7 +417,9 @@
       }
 
       & .card__title {
-        width: 100%;
+        width: 70%;
+        word-break: break-word;
+        align-self: center;
         text-align: center;
         font-size: 1.8rem;
         font-weight: bold;
@@ -815,6 +817,9 @@
       gap: 2rem;
 
       & .card {
+        & .card__title {
+          font-size: 1.3rem;
+        }
         width: clamp(40ch, 50%, 80ch);
         & #todo-check {
           top: 1.3rem;

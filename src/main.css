@@ -489,7 +489,9 @@ h6 {
   text-align: center;
 }
 .todos-page .todos-page__todos-list .card .card__title {
-  width: 100%;
+  width: 70%;
+  word-break: break-word;
+  align-self: center;
   text-align: center;
   font-size: 1.8rem;
   font-weight: bold;
@@ -833,6 +835,9 @@ h6 {
   }
   .todos-page .todos-page__todos-list .card {
     width: clamp(40ch, 50%, 80ch);
+  }
+  .todos-page .todos-page__todos-list .card .card__title {
+    font-size: 1.3rem;
   }
   .todos-page .todos-page__todos-list .card #todo-check {
     top: 1.3rem;
