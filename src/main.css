@@ -701,11 +701,11 @@ h6 {
   box-shadow: 0 0 0.2rem gray;
   gap: 0.5rem;
   color: #112d4e;
-  font-size: 0.7rem;
+  font-size: 1.2rem;
 }
 .footer i {
   color: #112d4e;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   transition: transform 0.3s ease-in-out;
 }
 .footer i:hover {

@@ -648,11 +648,11 @@
   box-shadow: 0 0 0.2rem gray;
   gap: 0.5rem;
   color: $navy;
-  font-size: 0.7rem;
+  font-size: 1.2rem;
 
   & i {
     color: $navy;
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     transition: transform 0.3s ease-in-out;
     &:hover {
       transform: rotateY(1turn) scale(1.2);
