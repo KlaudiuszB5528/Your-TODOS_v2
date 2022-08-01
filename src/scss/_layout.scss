@@ -18,7 +18,7 @@
   padding: 0.5rem;
   letter-spacing: 0.5rem;
 
-  & a {
+  a {
     text-decoration: none;
   }
 }
@@ -31,7 +31,7 @@
   color: $cold;
   text-transform: uppercase;
 
-  & i {
+  i {
     font-size: 3rem;
   }
 }
@@ -49,7 +49,7 @@
   padding-top: 1rem;
   border-bottom: 0.3rem solid rgba($navy, 0.5);
   display: flex;
-  & ul {
+  ul {
     @include displayFlexCentered;
     flex-flow: row wrap;
     margin: 0;
@@ -57,16 +57,16 @@
     list-style: none;
     gap: 0.5rem;
 
-    & li:last-child {
+    li:last-child {
       margin-bottom: 0.5rem;
     }
 
-    & li {
+    li {
       width: 95%;
       border-radius: 0.5rem;
       transition: background-color 0.2s ease-in-out;
 
-      & a.navlink_active {
+      a.navlink_active {
         background-color: $navy;
         color: $white;
       }
@@ -81,7 +81,7 @@
         background-color: $blue;
       }
 
-      & a {
+      a {
         @include displayFlexSpaceBetween;
         text-decoration: none;
         color: $cold;
@@ -89,12 +89,12 @@
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
 
-        & div {
+        div {
           @include displayFlexCentered;
           gap: 0.6rem;
         }
 
-        & span {
+        span {
           width: 2.5rem;
           height: 2.5rem;
           @include displayFlexCentered;
@@ -114,7 +114,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 3.5rem 1fr;
 
-  & .sidebar__projects-title {
+  .sidebar__projects-title {
     @include displayFlexCentered;
     padding: 1rem;
     width: 100%;
@@ -123,7 +123,7 @@
     color: $cold;
   }
 
-  & .sidebar__projects-list {
+  .sidebar__projects-list {
     width: 90%;
     height: 100%;
     padding: 0.2rem 0.4rem;
@@ -131,12 +131,12 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 
-    & ul {
+    ul {
       overflow-y: auto;
       max-height: 35rem;
     }
 
-    & li {
+    li {
       @include displayFlexSpaceBetween;
       height: 3.2rem;
       font-size: 1.6rem;
@@ -144,16 +144,16 @@
       border-radius: 0.5rem;
       cursor: pointer;
 
-      & [data-open="false"] {
+      [data-open="false"] {
         display: none;
       }
 
-      & [data-open="true"] {
+      [data-open="true"] {
         display: block;
       }
 
-      & [data-open="true"] ~ a,
-      & [data-open="true"] ~ .options {
+      [data-open="true"] ~ a,
+      [data-open="true"] ~ .options {
         display: none;
       }
 
@@ -162,7 +162,7 @@
         color: $white;
       }
 
-      & a {
+      a {
         width: 80%;
         white-space: nowrap;
         overflow: hidden;
@@ -171,16 +171,16 @@
         color: $cold;
       }
 
-      & .options {
+      .options {
         @include displayFlexCentered;
         gap: 0.5rem;
         font-size: 1.2rem;
 
-        & .fa-trash-alt:hover {
+        .fa-trash-alt:hover {
           color: $red;
         }
 
-        & .fa-pencil-alt:hover {
+        .fa-pencil-alt:hover {
           color: $green;
         }
 
@@ -210,8 +210,8 @@
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   border: none;
-
   cursor: pointer;
+
   &:hover {
     background-color: $darkblue;
     color: $white;
@@ -277,7 +277,7 @@
   padding: 0.5rem;
   height: 100%;
 
-  & .home-page {
+  .home-page {
     display: grid;
     height: 80%;
     place-items: center;
@@ -369,7 +369,7 @@
   height: 100%;
   position: relative;
 
-  & .no-todos-info {
+  .no-todos-info {
     position: absolute;
     top: 45%;
     left: 50%;
@@ -378,7 +378,7 @@
     color: rgba($navy, 0.5);
   }
 
-  & .todos-page__project-title {
+  .todos-page__project-title {
     @include displayFlexCentered;
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -387,7 +387,7 @@
     color: $navy;
   }
 
-  & .todos-page__todos-list {
+  .todos-page__todos-list {
     width: 100%;
     display: grid;
     justify-content: center;
@@ -395,7 +395,7 @@
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     padding: 2rem 0.5rem 1.3rem 4rem;
 
-    & .card {
+    .card {
       position: relative;
       width: clamp(45ch, 60%, 90ch);
       height: 21rem;
@@ -409,14 +409,14 @@
       scroll-behavior: smooth;
       scrollbar-gutter: stable both-edges;
 
-      & .dueDate {
+      .dueDate {
         font-size: bold;
         color: rgba($navy, 0.6);
         width: 100%;
         text-align: center;
       }
 
-      & .card__title {
+      .card__title {
         width: 70%;
         word-break: break-word;
         align-self: center;
@@ -428,7 +428,7 @@
         text-underline-offset: 0.3rem;
       }
 
-      & .card__description {
+      .card__description {
         width: 100%;
         padding: 1rem;
         text-align: center;
@@ -446,7 +446,7 @@
         }
       }
 
-      & .delete-todo-btn {
+      .delete-todo-btn {
         @include displayFlexCentered;
         position: absolute;
         top: 1rem;
@@ -461,7 +461,7 @@
         }
       }
 
-      & #todo-check {
+      #todo-check {
         @include displayFlexCentered;
         position: absolute;
         top: 1.3rem;
@@ -474,7 +474,7 @@
     }
   }
 
-  & .add-todo-btn {
+  .add-todo-btn {
     position: absolute;
     border: none;
     box-shadow: 0 0 0.4rem rgba($navy, 0.5);
@@ -527,7 +527,7 @@
   z-index: 101;
   overflow: auto;
 
-  & .modal__close-btn {
+  .modal__close-btn {
     @include displayFlexCentered;
     position: absolute;
     top: 0.3rem;
@@ -537,6 +537,7 @@
     background: none;
     height: 2rem;
     width: 2rem;
+    font-size: 1.5rem;
     color: rgba($navy, 0.5);
 
     &:hover {
@@ -544,12 +545,12 @@
     }
   }
 
-  & .modal__submit-btn {
+  .modal__submit-btn {
     @include displayFlexCentered;
     position: absolute;
     bottom: 1rem;
     left: 50%;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     transform: translateX(-50%);
     border: none;
     outline: none;
@@ -563,22 +564,22 @@
     }
   }
 
-  & .modal__content {
+  .modal__content {
     width: 100%;
     height: 100%;
     position: relative;
 
-    & form {
+    form {
       height: 95%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
-      & .modal__input-box {
+      .modal__input-box {
         position: relative;
 
-        & input[type="text"],
-        & textarea {
+        input[type="text"],
+        textarea {
           width: 100%;
           padding: 1rem;
           border: 0.1rem solid rgba($navy, 0.25);
@@ -586,7 +587,7 @@
           border-radius: 0.5rem;
           outline: none;
           color: $navy;
-          font-size: 1rem;
+          font-size: 1.7rem;
           transition: 0.5s;
 
           &:valid ~ label,
@@ -594,7 +595,7 @@
             color: $navy;
             transform: translateX(10px) translateY(-7px);
             padding: 0 1rem;
-            font-size: 0.7rem;
+            font-size: 1rem;
             background: $white;
             border-left: 0.1rem solid $navy;
             border-right: 0.1rem solid $navy;
@@ -611,14 +612,14 @@
             left: 0;
             padding: 1rem;
             pointer-events: none;
-            font-size: 1rem;
+            font-size: 1.4rem;
             color: rgba($navy, 0.5);
             text-transform: uppercase;
             transition: 0.5s;
           }
         }
 
-        & textarea {
+        textarea {
           width: 100%;
           height: 20rem;
           resize: none;
@@ -627,10 +628,10 @@
         &.date {
           @include displayFlexCentered;
           gap: 0.6rem;
-          font-size: 1.1rem;
+          font-size: 1.6rem;
           color: rgba($navy, 0.6);
 
-          & input {
+          input {
             color: rgba($navy, 0.7);
             padding: 0.5rem;
             border: 0.1rem solid $cold;
@@ -652,7 +653,7 @@
   color: $navy;
   font-size: 1.2rem;
 
-  & i {
+  i {
     color: $navy;
     font-size: 1.3rem;
     transition: transform 0.3s ease-in-out;
@@ -696,18 +697,18 @@
   }
 
   .sidebar__inbox {
-    & ul {
-      & li:last-child {
+    ul {
+      li:last-child {
         margin-bottom: 0.3rem;
       }
 
-      & li {
-        & a {
+      li {
+        a {
           font-size: 1.1rem;
           padding: 0.4rem 0.8rem;
           border-radius: 0.5rem;
 
-          & span {
+          span {
             width: 2rem;
             height: 2rem;
           }
@@ -717,15 +718,15 @@
   }
 
   .sidebar__projects {
-    & .sidebar__projects-title {
+    .sidebar__projects-title {
       font-size: 1.6rem;
     }
 
-    & .sidebar__projects-list {
-      & li {
+    .sidebar__projects-list {
+      li {
         font-size: 1rem;
 
-        & .options {
+        .options {
           @include displayFlexCentered;
           gap: 0.5rem;
           font-size: 1rem;
@@ -789,7 +790,7 @@
     overflow-y: auto;
     overflow-x: hidden;
 
-    & .home-page {
+    .home-page {
       .typewriter {
         border-right: 0.3rem solid;
         font-size: 1.9rem;
@@ -798,11 +799,11 @@
   }
 
   .todos-page {
-    & .project.title {
+    .project.title {
       padding-right: 2rem;
     }
 
-    & .no-todos-info {
+    .no-todos-info {
       text-align: center;
       left: 55%;
       top: 50%;
@@ -810,18 +811,18 @@
       width: 80%;
     }
 
-    & .todos-page__todos-list {
+    .todos-page__todos-list {
       place-items: center;
       grid-template-columns: 1fr;
       padding: 1rem 2rem;
       gap: 2rem;
 
-      & .card {
-        & .card__title {
+      .card {
+        .card__title {
           font-size: 1.3rem;
         }
         width: clamp(40ch, 50%, 80ch);
-        & #todo-check {
+        #todo-check {
           top: 1.3rem;
           left: 0.5rem;
           height: 1rem;
@@ -829,7 +830,7 @@
       }
     }
 
-    & .add-todo-btn {
+    .add-todo-btn {
       top: 0.7rem;
       right: 0.2rem;
       height: 2rem;
@@ -838,12 +839,19 @@
     }
   }
   .modal {
-    & .modal__content {
-      & form {
-        & .modal__input-box {
-          & input[type="text"],
-          & textarea {
-            font-size: 1.2rem;
+    .modal__submit-btn {
+      font-size: 2.2rem;
+    }
+    .modal__content {
+      form {
+        .modal__input-box {
+          textarea {
+            height: 25rem;
+          }
+
+          input[type="text"],
+          textarea {
+            font-size: 1.4rem;
             transition: 0.5s;
 
             &:valid ~ label,
@@ -851,7 +859,7 @@
               color: $navy;
               transform: translateX(1rem) translateY(-0.7rem);
               padding: 0 1rem;
-              font-size: 0.8rem;
+              font-size: 1.1rem;
               background: $white;
               border-left: 0.1rem solid $navy;
               border-right: 0.1rem solid $navy;
@@ -868,7 +876,7 @@
               left: 0;
               padding: 1rem;
               pointer-events: none;
-              font-size: 1rem;
+              font-size: 1.4rem;
               color: rgba($navy, 0.5);
               text-transform: uppercase;
               transition: 0.5s;
@@ -878,10 +886,14 @@
           &.date {
             @include displayFlexCentered;
             gap: 0.6rem;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             color: rgba($navy, 0.6);
 
-            & input {
+            label {
+              font-size: 1.8rem;
+            }
+
+            input {
               color: rgba($navy, 0.7);
               padding: 0.4rem;
               border: 0.1rem solid $cold;
@@ -903,7 +915,7 @@
     color: $navy;
     font-size: 0.8rem;
 
-    & i {
+    i {
       color: $navy;
       font-size: 0.9rem;
       transition: transform 0.3s ease-in-out;
