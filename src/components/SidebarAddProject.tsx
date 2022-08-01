@@ -59,7 +59,7 @@ export const SidebarAddProject: React.FC = () => {
       <input
         ref={inputRef}
         type="text"
-        maxLength={50}
+        maxLength={16}
         className="sidebar__add-project-input"
         placeholder="Project name"
         onKeyDown={(e) => {
