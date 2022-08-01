@@ -829,9 +829,7 @@ h6 {
     place-items: center;
     grid-template-columns: 1fr;
     padding: 1rem 2rem;
-  }
-  .todos-page .todos-page__todos-list .card {
-    width: clamp(30ch, 50%, 60ch);
+    gap: 2rem;
   }
   .todos-page .todos-page__todos-list .card #todo-check {
     top: 1.3rem;

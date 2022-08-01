@@ -812,10 +812,9 @@
       place-items: center;
       grid-template-columns: 1fr;
       padding: 1rem 2rem;
+      gap: 2rem;
 
       & .card {
-        width: clamp(30ch, 50%, 60ch);
-
         & #todo-check {
           top: 1.3rem;
           left: 0.5rem;
