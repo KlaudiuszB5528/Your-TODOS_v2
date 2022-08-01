@@ -831,6 +831,9 @@ h6 {
     padding: 1rem 2rem;
     gap: 2rem;
   }
+  .todos-page .todos-page__todos-list .card {
+    width: clamp(40ch, 50%, 80ch);
+  }
   .todos-page .todos-page__todos-list .card #todo-check {
     top: 1.3rem;
     left: 0.5rem;
