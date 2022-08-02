@@ -73,7 +73,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #112d4e;
+  background-image: linear-gradient(to right, #112d4e, #03090f);
   padding: 0.5rem;
   letter-spacing: 0.5rem;
 }
@@ -88,7 +88,10 @@ h6 {
   gap: 0.5rem;
   font-size: 2rem;
   font-weight: bold;
-  color: #dbe2ef;
+  background-image: linear-gradient(to bottom, #dbe2ef, #718dc0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   text-transform: uppercase;
 }
 .header__title i {
@@ -97,7 +100,7 @@ h6 {
 
 .sidebar {
   grid-area: sidebar;
-  background-color: #3f72af;
+  background-image: linear-gradient(to bottom, #3f72af, #325a8a);
   color: #dbe2ef;
   display: grid;
   grid-template-columns: 1fr;
@@ -128,16 +131,16 @@ h6 {
   transition: background-color 0.2s ease-in-out;
 }
 .sidebar__inbox ul li a.navlink_active {
-  background-color: #112d4e;
+  background-image: linear-gradient(to right, #112d4e, #081524);
   color: #f9f7f7;
 }
 .sidebar__inbox ul li:hover {
   cursor: pointer;
-  background-color: #112d4e;
+  background-image: linear-gradient(to right, #112d4e, #081524);
   color: #f9f7f7;
 }
 .sidebar__inbox ul li:hover a span {
-  background-color: #3f72af;
+  background-image: linear-gradient(to bottom, #3f72af, #325a8a);
 }
 .sidebar__inbox ul li a {
   display: flex;
@@ -162,7 +165,7 @@ h6 {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: #112d4e;
+  background-image: linear-gradient(to bottom, #112d4e, #081524);
   color: #dbe2ef;
 }
 
@@ -216,7 +219,7 @@ h6 {
   display: none;
 }
 .sidebar__projects .sidebar__projects-list li:hover {
-  background-color: #112d4e;
+  background-image: linear-gradient(to right, #112d4e, #081524);
   color: #f9f7f7;
 }
 .sidebar__projects .sidebar__projects-list li a {
@@ -258,7 +261,7 @@ h6 {
   align-items: center;
   align-self: center;
   height: 3.2rem;
-  background-color: #112d4e;
+  background-image: linear-gradient(to right, #112d4e, #081524);
   color: #dbe2ef;
   font-size: 1.7rem;
   padding: 0.5rem 1rem;
@@ -267,7 +270,7 @@ h6 {
   cursor: pointer;
 }
 .sidebar__add-project-btn:hover {
-  background-color: #03396c;
+  background-image: linear-gradient(to right, #03396c, #021f3a);
   color: #f9f7f7;
   transform: translateY(-0.2rem);
   box-shadow: 0rem 0.5rem 1rem rgba(17, 45, 78, 0.6);
@@ -346,6 +349,10 @@ h6 {
   opacity: 0;
 }
 .main-section .home-page .typewriter {
+  background-image: linear-gradient(to right, #112d4e, #081524);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
   width: 21ch;
   -webkit-animation: typing 2s steps(21), blink 450ms step-end infinite alternate;
           animation: typing 2s steps(21), blink 450ms step-end infinite alternate;
@@ -550,12 +557,12 @@ h6 {
   right: 1rem;
   height: 3rem;
   width: 9rem;
-  background-color: #112d4e;
+  background-image: linear-gradient(to right, #112d4e, #081524);
   color: #dbe2ef;
   border-radius: 1rem;
 }
 .todos-page .add-todo-btn:hover {
-  background-color: #03396c;
+  background-image: linear-gradient(to right, #03396c, #021f3a);
   color: #f9f7f7;
   box-shadow: 0px 0.5rem 1rem rgba(17, 45, 78, 0.6);
   transform: translateY(-0.2rem);
