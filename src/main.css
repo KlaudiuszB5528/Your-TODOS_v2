@@ -863,6 +863,12 @@ h6 {
     width: 8rem;
     font-size: 1.5rem;
   }
+  .main-section .add-todo-btn:hover {
+    transform: translate(50%, -0.2rem);
+  }
+  .main-section .add-todo-btn:active {
+    transform: translate(50%, -0.1rem);
+  }
   .modal .modal__submit-btn {
     font-size: 2.2rem;
   }
