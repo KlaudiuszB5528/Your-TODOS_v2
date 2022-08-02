@@ -1,0 +1,207 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.todos-page {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  position: relative;
+
+  .no-todos-info {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.7rem;
+    color: rgba($navy, 0.5);
+  }
+
+  .todos-page__project-title {
+    @include displayFlexCentered;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    width: 100%;
+    font-size: 2.4rem;
+    color: $navy;
+  }
+
+  .todos-page__todos-list {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    padding: 2rem 0.5rem 1.3rem 4rem;
+
+    .card {
+      position: relative;
+      width: clamp(45ch, 60%, 90ch);
+      height: 21rem;
+      display: flex;
+      flex-direction: column;
+      padding: 0.4rem;
+      background-color: $white;
+      border-radius: 1rem;
+      box-shadow: 0 0 0.9rem rgba($navy, 0.5);
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      scrollbar-gutter: stable both-edges;
+
+      .dueDate {
+        font-size: bold;
+        color: rgba($navy, 0.6);
+        width: 100%;
+        text-align: center;
+      }
+
+      .card__title {
+        width: 70%;
+        word-break: break-word;
+        align-self: center;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $navy;
+        text-decoration: underline;
+        text-underline-offset: 0.3rem;
+      }
+
+      .card__description {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.3rem;
+        word-wrap: break-word;
+        color: $darkblue;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+          width: 0.3rem;
+        }
+
+        &::-webkit-scrollbar-button {
+          height: 0.5rem;
+        }
+      }
+
+      .delete-todo-btn {
+        @include displayFlexCentered;
+        position: absolute;
+        top: 1rem;
+        right: 0.5rem;
+        border: none;
+        outline: none;
+        background: none;
+        color: rgba($navy, 0.5);
+
+        &:hover {
+          color: $red;
+        }
+      }
+
+      #todo-check {
+        @include displayFlexCentered;
+        position: absolute;
+        top: 1.3rem;
+        left: 0.5rem;
+
+        &:checked ~ .card__description {
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+
+  .add-todo-btn {
+    position: absolute;
+    border: none;
+    box-shadow: 0 0 0.4rem rgba($navy, 0.5);
+    bottom: 1.5rem;
+    font-size: 1.5rem;
+    right: 1rem;
+    height: 3rem;
+    width: 9rem;
+    background-image: linear-gradient(to right, $navy, darken($navy, 10%));
+    color: $cold;
+    border-radius: 1rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background-image: linear-gradient(
+        to right,
+        $darkblue,
+        darken($darkblue, 10%)
+      );
+      color: $white;
+      box-shadow: 0px 0.5rem 1rem rgba($navy, 0.6);
+      transform: translateY(-0.2rem);
+    }
+
+    &:active {
+      box-shadow: 0px 0.3rem 0.6rem rgba($navy, 0.6);
+      transform: translateY(-0.1rem);
+    }
+  }
+}
+
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+/// //////////////////////////////////////////
+/// media queries
+
+@media screen and (max-width: 787px) {
+  .todos-page {
+    .todos-page__project-title {
+      margin-bottom: 4rem;
+    }
+
+    .no-todos-info {
+      text-align: center;
+      left: 55%;
+      top: 50%;
+      font-size: 1.8rem;
+      width: 80%;
+    }
+
+    .todos-page__todos-list {
+      place-items: center;
+      grid-template-columns: 1fr;
+      padding: 1rem 2rem;
+      gap: 2rem;
+
+      .card {
+        width: clamp(40ch, 50%, 80ch);
+
+        .card__title {
+          font-size: 1.3rem;
+        }
+
+        #todo-check {
+          top: 1.3rem;
+          left: 0.5rem;
+          height: 1rem;
+        }
+
+        &:last-child {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+  .add-todo-btn {
+    top: 4.3rem;
+    right: 50%;
+    transform: translateX(50%);
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 1.5rem;
+
+    &:hover {
+      transform: translate(50%, -0.2rem);
+    }
+
+    &:active {
+      transform: translate(50%, -0.1rem);
+    }
+  }
+}

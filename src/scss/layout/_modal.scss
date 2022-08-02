@@ -1,0 +1,224 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($navy, 0.6);
+  z-index: 100;
+  overflow: auto;
+  pointer-events: all;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 1rem rgba($navy, 0.7);
+  width: 36rem;
+  height: 40rem;
+  background-color: $cold;
+  border-radius: 1rem;
+  padding: 2rem;
+  z-index: 101;
+  overflow: auto;
+
+  .modal__close-btn {
+    @include displayFlexCentered;
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    border: none;
+    outline: none;
+    background: none;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.5rem;
+    color: rgba($navy, 0.5);
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  .modal__submit-btn {
+    @include displayFlexCentered;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    font-size: 1.6rem;
+    transform: translateX(-50%);
+    border: none;
+    outline: none;
+    background: none;
+    height: 2rem;
+    width: 2rem;
+    color: rgba($navy, 0.5);
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  .modal__content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    form {
+      height: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .modal__input-box {
+        position: relative;
+
+        input[type="text"],
+        textarea {
+          width: 100%;
+          padding: 1rem;
+          border: 0.1rem solid rgba($navy, 0.25);
+          background: $white;
+          border-radius: 0.5rem;
+          outline: none;
+          color: $navy;
+          font-size: 1.7rem;
+          transition: 0.5s;
+
+          &:valid ~ label,
+          &:focus ~ label {
+            color: $navy;
+            transform: translateX(10px) translateY(-7px);
+            padding: 0 1rem;
+            font-size: 1rem;
+            background: $white;
+            border-left: 0.1rem solid $navy;
+            border-right: 0.1rem solid $navy;
+            letter-spacing: 0.2rem;
+          }
+
+          &:valid,
+          &:focus {
+            border: 1px solid $navy;
+          }
+
+          & ~ label {
+            position: absolute;
+            left: 0;
+            padding: 1rem;
+            pointer-events: none;
+            font-size: 1.4rem;
+            color: rgba($navy, 0.5);
+            text-transform: uppercase;
+            transition: 0.5s;
+          }
+        }
+
+        textarea {
+          width: 100%;
+          height: 20rem;
+          resize: none;
+        }
+
+        &.date {
+          @include displayFlexCentered;
+          gap: 0.6rem;
+          font-size: 1.6rem;
+          color: rgba($navy, 0.6);
+
+          input {
+            color: rgba($navy, 0.7);
+            padding: 0.5rem;
+            border: 0.1rem solid $cold;
+
+            &:focus {
+              outline: 0.1rem solid $navy;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+/// //////////////////////////////////////////
+/// media queries
+
+@media screen and (min-width: 787px) {
+  .modal {
+    .modal__submit-btn {
+      font-size: 2.2rem;
+    }
+    .modal__content {
+      form {
+        .modal__input-box {
+          textarea {
+            height: 25rem;
+          }
+
+          input[type="text"],
+          textarea {
+            font-size: 1.4rem;
+            transition: 0.5s;
+
+            &:valid ~ label,
+            &:focus ~ label {
+              color: $navy;
+              transform: translateX(1rem) translateY(-0.7rem);
+              padding: 0 1rem;
+              font-size: 1.1rem;
+              background: $white;
+              border-left: 0.1rem solid $navy;
+              border-right: 0.1rem solid $navy;
+              letter-spacing: 0.2rem;
+            }
+
+            &:valid,
+            &:focus {
+              border: 0.1rem solid $navy;
+            }
+
+            & ~ label {
+              position: absolute;
+              left: 0;
+              padding: 1rem;
+              pointer-events: none;
+              font-size: 1.4rem;
+              color: rgba($navy, 0.5);
+              text-transform: uppercase;
+              transition: 0.5s;
+            }
+          }
+
+          &.date {
+            @include displayFlexCentered;
+            gap: 0.6rem;
+            font-size: 1.5rem;
+            color: rgba($navy, 0.6);
+
+            label {
+              font-size: 1.8rem;
+            }
+
+            input {
+              color: rgba($navy, 0.7);
+              padding: 0.4rem;
+              border: 0.1rem solid $cold;
+
+              &:focus {
+                outline: 0.1rem solid $navy;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

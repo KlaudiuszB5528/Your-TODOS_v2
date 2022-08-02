@@ -1,27 +1,9 @@
-$white: #f9f7f7;
-$cold: #dbe2ef;
-$blue: #3f72af;
-$navy: #112d4e;
-$darkblue: #03396c;
-$red: #a42009;
-$green: #0f762c;
-
-@mixin displayFlexCentered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin displayFlexSpaceBetween {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+@use "../abstracts/variables" as *;
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 * {
@@ -29,19 +11,19 @@ $green: #0f762c;
   padding: 0;
 
   &::-webkit-scrollbar {
-    width: 6px;
+    width: 0.6rem;
   }
   &::-webkit-scrollbar-track {
-    border-radius: 10px;
+    border-radius: 1rem;
     background: $cold;
   }
   &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: 1rem;
     background: $navy;
   }
 
   &::-webkit-scrollbar-button {
-    height: 20px;
+    height: 2rem;
   }
 }
 
@@ -52,6 +34,7 @@ html {
 html,
 body {
   height: 100%;
+  box-sizing: border-box;
 }
 
 body {
@@ -80,4 +63,28 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 787px) {
+  * {
+    &::-webkit-scrollbar {
+      width: 0.6rem;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 1rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+    }
+
+    &::-webkit-scrollbar-button {
+      height: 2rem;
+    }
+  }
+
+  html {
+    font-size: 50%;
+    height: 100%;
+    width: 100%;
+  }
 }

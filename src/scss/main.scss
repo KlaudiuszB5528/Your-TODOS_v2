@@ -1,2 +1,9 @@
-@use "base";
-@use "layout";
+@use "./base/base";
+@use "./layout/layout";
+@use "./layout/header";
+@use "./layout/footer";
+@use "./layout/home";
+@use "./layout/modal";
+@use "./layout/sidebarInbox";
+@use "./layout/sidebarProjects";
+@use "./layout/todosPage";

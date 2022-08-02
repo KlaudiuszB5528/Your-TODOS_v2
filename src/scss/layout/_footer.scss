@@ -1,0 +1,43 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.footer {
+  @include displayFlexCentered;
+  box-shadow: 0 0 0.2rem gray;
+  gap: 0.5rem;
+  color: $navy;
+  font-size: 1.2rem;
+
+  i {
+    color: $navy;
+    font-size: 1.3rem;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: rotateY(1turn) scale(1.2);
+    }
+  }
+}
+
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+/// //////////////////////////////////////////
+/// media queries
+
+@media screen and(max-width:787px) {
+  .footer {
+    @include displayFlexCentered;
+    box-shadow: 0 0 0.2rem gray;
+    gap: 0.3rem;
+    color: $navy;
+    font-size: 0.8rem;
+
+    i {
+      color: $navy;
+      font-size: 0.9rem;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: rotateY(1turn) scale(1.2);
+      }
+    }
+  }
+}

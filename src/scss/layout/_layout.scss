@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as *;
+
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(22rem, 17%) 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "sidebar footer";
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-image: linear-gradient(to bottom left, $blue, darken($blue, 15%));
+  color: $cold;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 18.5rem 1fr 7rem;
+}
+
+.main-section {
+  grid-area: main;
+  background-color: $cold;
+  padding: 0.5rem;
+  height: 100%;
+}
+
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+/// //////////////////////////////////////////
+/// media queries
+
+@media screen and (max-width: 787px) {
+  #root {
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 15rem 1fr;
+  }
+
+  .sidebar {
+    grid-template-rows: 13rem 1fr 6rem;
+  }
+
+  .main-section {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}

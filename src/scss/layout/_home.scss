@@ -1,0 +1,81 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/animations" as *;
+
+.home-page {
+  display: grid;
+  height: 80%;
+  place-items: center;
+  color: $navy;
+
+  .subtext {
+    text-align: center;
+    font-size: 1.6rem;
+    animation: slideIn 0.5s forwards;
+    animation-delay: 2.1s;
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+
+  .typewriter {
+    background-image: linear-gradient(to right, $navy, darken($navy, 10%));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    width: 21ch;
+    animation: typing 2s steps(21), blink 450ms step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    will-change: width;
+    border-right: 3px solid;
+    font-size: 2.8rem;
+
+    &.welcome {
+      font-weight: bold;
+    }
+
+    &.step1 {
+      text-align: center;
+      width: 20ch;
+      animation: typing 1.5s steps(20), fadeIn 0.2s forwards;
+      animation-delay: 2.2s;
+      border: none;
+      opacity: 0;
+    }
+    &.step2 {
+      text-align: center;
+      width: 22ch;
+      animation: typing 1.5s steps(22), fadeIn 0.2s forwards;
+      animation-delay: 3.2s;
+      border: none;
+      opacity: 0;
+    }
+    &.step3 {
+      text-align: center;
+      width: 21ch;
+      animation: typing 1.5s steps(21), fadeIn 0.2s forwards;
+      animation-delay: 4.7s;
+      border: none;
+      opacity: 0;
+    }
+  }
+
+  h2 {
+    @include displayFlexCentered;
+    width: 100%;
+  }
+}
+
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+/// //////////////////////////////////////////
+/// media queries
+
+@media screen and (max-width: 787px) {
+  .home-page {
+    .typewriter {
+      border-right: 0.3rem solid;
+      font-size: 1.9rem;
+    }
+  }
+}

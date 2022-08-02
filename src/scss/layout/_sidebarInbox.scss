@@ -1,0 +1,96 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.sidebar__inbox {
+  padding-top: 1rem;
+  border-bottom: 0.3rem solid rgba($navy, 0.5);
+  display: flex;
+  ul {
+    @include displayFlexCentered;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 0.5rem;
+
+    li:last-child {
+      margin-bottom: 0.5rem;
+    }
+
+    li {
+      width: 95%;
+      border-radius: 0.5rem;
+      transition: background-color 0.2s ease-in-out;
+
+      a.navlink_active {
+        background-image: linear-gradient(to right, $navy, darken($navy, 10%));
+        color: $white;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-image: linear-gradient(to right, $navy, darken($navy, 10%));
+        color: $white;
+      }
+
+      &:hover a span {
+        background-image: linear-gradient(to bottom, $blue, darken($blue, 10%));
+      }
+
+      a {
+        @include displayFlexSpaceBetween;
+        text-decoration: none;
+        color: $cold;
+        font-size: 1.7rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+
+        div {
+          @include displayFlexCentered;
+          gap: 0.6rem;
+        }
+
+        span {
+          width: 2.5rem;
+          height: 2.5rem;
+          @include displayFlexCentered;
+          border-radius: 50%;
+          background-image: linear-gradient(
+            to bottom,
+            $navy,
+            darken($navy, 10%)
+          );
+          color: $cold;
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+/// //////////////////////////////////////////
+/// media queries
+
+@media screen and (max-width: 787px) {
+  .sidebar__inbox {
+    ul {
+      li:last-child {
+        margin-bottom: 0.3rem;
+      }
+
+      li {
+        a {
+          font-size: 1.1rem;
+          padding: 0.4rem 0.8rem;
+          border-radius: 0.5rem;
+
+          span {
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
