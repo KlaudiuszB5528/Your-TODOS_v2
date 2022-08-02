@@ -825,39 +825,43 @@ h6 {
     border-right: 0.3rem solid;
     font-size: 1.9rem;
   }
-  .todos-page .project.title {
-    padding-right: 2rem;
+  .main-section .todos-page .todos-page__project-title {
+    margin-bottom: 4rem;
   }
-  .todos-page .no-todos-info {
+  .main-section .todos-page .no-todos-info {
     text-align: center;
     left: 55%;
     top: 50%;
     font-size: 1.8rem;
     width: 80%;
   }
-  .todos-page .todos-page__todos-list {
+  .main-section .todos-page .todos-page__todos-list {
     place-items: center;
     grid-template-columns: 1fr;
     padding: 1rem 2rem;
     gap: 2rem;
   }
-  .todos-page .todos-page__todos-list .card {
+  .main-section .todos-page .todos-page__todos-list .card {
     width: clamp(40ch, 50%, 80ch);
   }
-  .todos-page .todos-page__todos-list .card .card__title {
+  .main-section .todos-page .todos-page__todos-list .card .card__title {
     font-size: 1.3rem;
   }
-  .todos-page .todos-page__todos-list .card #todo-check {
+  .main-section .todos-page .todos-page__todos-list .card #todo-check {
     top: 1.3rem;
     left: 0.5rem;
     height: 1rem;
   }
-  .todos-page .add-todo-btn {
-    top: 0.7rem;
-    right: 0.2rem;
-    height: 2rem;
-    width: 5rem;
-    font-size: 1rem;
+  .main-section .todos-page .todos-page__todos-list .card:last-child {
+    margin-bottom: 2rem;
+  }
+  .main-section .add-todo-btn {
+    top: 4.3rem;
+    right: 50%;
+    transform: translateX(50%);
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 1.5rem;
   }
   .modal .modal__submit-btn {
     font-size: 2.2rem;
