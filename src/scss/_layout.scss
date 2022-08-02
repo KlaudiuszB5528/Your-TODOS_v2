@@ -218,6 +218,7 @@
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
+  transition: all 0.2s;
 
   &:hover {
     background-image: linear-gradient(
@@ -261,6 +262,7 @@
   color: $cold;
   border: none;
   text-transform: uppercase;
+  transition: all 0.2s;
 }
 
 .cancel {
@@ -501,6 +503,7 @@
     background-image: linear-gradient(to right, $navy, darken($navy, 10%));
     color: $cold;
     border-radius: 1rem;
+    transition: all 0.2s;
 
     &:hover {
       background-image: linear-gradient(
