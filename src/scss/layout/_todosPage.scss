@@ -129,7 +129,7 @@
     width: 9rem;
     background-image: linear-gradient(to right, $navy, darken($navy, 10%));
     color: $cold;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     transition: all 0.2s;
 
     &:hover {

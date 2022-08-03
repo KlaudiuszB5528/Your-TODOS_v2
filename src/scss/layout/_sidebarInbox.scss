@@ -13,14 +13,14 @@
     list-style: none;
     gap: 0.5rem;
 
-    li:last-child {
-      margin-bottom: 0.5rem;
-    }
-
     li {
       width: 95%;
       border-radius: 0.5rem;
       transition: background-color 0.2s ease-in-out;
+
+      &:last-child {
+        margin-bottom: 0.5rem;
+      }
 
       a.navlink_active {
         background-image: linear-gradient(to right, $navy, darken($navy, 10%));
@@ -75,20 +75,19 @@
 @media screen and (max-width: 787px) {
   .sidebar__inbox {
     ul {
-      li:last-child {
-        margin-bottom: 0.3rem;
-      }
-
       li {
         a {
-          font-size: 1.1rem;
-          padding: 0.4rem 0.8rem;
+          font-size: 1.35rem;
+          padding: 0.3rem 0.6rem;
           border-radius: 0.5rem;
 
           span {
             width: 2rem;
             height: 2rem;
           }
+        }
+        &:last-child {
+          margin-bottom: 0.3rem;
         }
       }
     }
