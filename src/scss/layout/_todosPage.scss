@@ -49,7 +49,7 @@
       transition: all 0.2s;
 
       &:hover {
-        transform: translateY(-0.3rem);
+        transform: translateY(-0.3rem) scale(1.05);
         box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.6);
       }
 
@@ -193,21 +193,22 @@
         }
       }
     }
-  }
-  .add-todo-btn {
-    top: 4.3rem;
-    right: 50%;
-    transform: translateX(50%);
-    height: 2.5rem;
-    width: 8rem;
-    font-size: 1.5rem;
 
-    &:hover {
-      transform: translate(50%, -0.2rem);
-    }
+    .add-todo-btn {
+      top: 4.3rem;
+      right: 50%;
+      transform: translateX(50%);
+      height: 2.5rem;
+      width: 8rem;
+      font-size: 1.5rem;
 
-    &:active {
-      transform: translate(50%, -0.1rem);
+      &:hover {
+        transform: translate(50%, -0.2rem);
+      }
+
+      &:active {
+        transform: translate(50%, -0.1rem);
+      }
     }
   }
 }

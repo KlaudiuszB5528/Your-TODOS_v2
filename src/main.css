@@ -844,7 +844,7 @@ h6 {
   transition: all 0.2s;
 }
 .todos-page .todos-page__todos-list .card:hover {
-  transform: translateY(-0.3rem);
+  transform: translateY(-0.3rem) scale(1.05);
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.6);
 }
 .todos-page .todos-page__todos-list .card .dueDate {
@@ -961,7 +961,7 @@ h6 {
   .todos-page .todos-page__todos-list .card:last-child {
     margin-bottom: 2rem;
   }
-  .add-todo-btn {
+  .todos-page .add-todo-btn {
     top: 4.3rem;
     right: 50%;
     transform: translateX(50%);
@@ -969,10 +969,10 @@ h6 {
     width: 8rem;
     font-size: 1.5rem;
   }
-  .add-todo-btn:hover {
+  .todos-page .add-todo-btn:hover {
     transform: translate(50%, -0.2rem);
   }
-  .add-todo-btn:active {
+  .todos-page .add-todo-btn:active {
     transform: translate(50%, -0.1rem);
   }
 }/*# sourceMappingURL=main.css.map */
