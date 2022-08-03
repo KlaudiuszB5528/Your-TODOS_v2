@@ -836,11 +836,16 @@ h6 {
   flex-direction: column;
   padding: 0.4rem;
   background-color: #f9f7f7;
-  border-radius: 1rem;
-  box-shadow: 0 0 0.9rem rgba(17, 45, 78, 0.5);
+  border-radius: 0.5rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
   overflow-y: auto;
   scroll-behavior: smooth;
   scrollbar-gutter: stable both-edges;
+  transition: all 0.2s;
+}
+.todos-page .todos-page__todos-list .card:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.6);
 }
 .todos-page .todos-page__todos-list .card .dueDate {
   font-size: bold;
