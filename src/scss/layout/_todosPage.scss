@@ -32,90 +32,6 @@
     gap: 1.2rem;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     padding: 2rem 0.5rem 1.3rem 4rem;
-
-    .card {
-      position: relative;
-      width: clamp(45ch, 60%, 90ch);
-      height: 21rem;
-      display: flex;
-      flex-direction: column;
-      padding: 0.4rem;
-      background-color: $white;
-      border-radius: 0.5rem;
-      box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
-      overflow-y: auto;
-      scroll-behavior: smooth;
-      scrollbar-gutter: stable both-edges;
-      transition: all 0.2s;
-
-      &:hover {
-        transform: translateY(-0.3rem) scale(1.05);
-        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.6);
-      }
-
-      .dueDate {
-        font-size: bold;
-        color: rgba($navy, 0.6);
-        width: 100%;
-        text-align: center;
-      }
-
-      .card__title {
-        width: 70%;
-        word-break: break-word;
-        align-self: center;
-        text-align: center;
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: $navy;
-        text-decoration: underline;
-        text-underline-offset: 0.3rem;
-      }
-
-      .card__description {
-        width: 100%;
-        padding: 1rem;
-        text-align: center;
-        font-size: 1.3rem;
-        word-wrap: break-word;
-        color: $darkblue;
-        overflow-y: auto;
-
-        &::-webkit-scrollbar {
-          width: 0.3rem;
-        }
-
-        &::-webkit-scrollbar-button {
-          height: 0.5rem;
-        }
-      }
-
-      .delete-todo-btn {
-        @include displayFlexCentered;
-        position: absolute;
-        top: 1rem;
-        right: 0.5rem;
-        border: none;
-        outline: none;
-        background: none;
-        color: rgba($navy, 0.5);
-
-        &:hover {
-          color: $red;
-        }
-      }
-
-      #todo-check {
-        @include displayFlexCentered;
-        position: absolute;
-        top: 1.3rem;
-        left: 0.5rem;
-
-        &:checked ~ .card__description {
-          text-decoration: line-through;
-        }
-      }
-    }
   }
 
   .add-todo-btn {
@@ -150,6 +66,118 @@
   }
 }
 
+.card {
+  perspective: 100rem;
+  height: 20rem;
+  position: relative;
+
+  &__side {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    background-color: lighten($cold, 100%);
+    border-radius: 0.3rem;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable both-edges;
+    transition: all 0.8s;
+  }
+
+  &__side--front {
+    outline: 1px solid $navy;
+    outline-offset: -0.7rem;
+    display: grid;
+    place-content: center;
+
+    .card:hover & {
+      transform: rotateY(-180deg);
+    }
+
+    .dueDate {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: rgba($navy, 0.6);
+      text-align: center;
+
+      &.completed {
+        text-decoration: line-through;
+      }
+    }
+
+    .card__title {
+      word-break: break-word;
+      align-self: center;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: $navy;
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
+
+      &.completed {
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  &__side--back {
+    transform: rotateY(180deg);
+    display: grid;
+    place-content: center;
+    .delete-todo-btn {
+      @include displayFlexCentered;
+      position: absolute;
+      top: 1rem;
+      right: 0.6rem;
+      border: none;
+      outline: none;
+      background: none;
+      color: rgba($navy, 0.5);
+
+      &:hover {
+        color: $red;
+      }
+    }
+
+    #todo-check {
+      @include displayFlexCentered;
+      position: absolute;
+      top: 1rem;
+      left: 0.5rem;
+
+      &:checked ~ .card__description {
+        text-decoration: line-through;
+      }
+    }
+
+    .card__description {
+      width: 100%;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      font-size: 1.3rem;
+      word-wrap: break-word;
+      color: $darkblue;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 0.2rem;
+      }
+
+      &::-webkit-scrollbar-button {
+        height: 1rem;
+      }
+    }
+
+    .card:hover & {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
 ////////////////////////////////////////////////
 ///////////////////////////////////////////////
 /// //////////////////////////////////////////
@@ -170,28 +198,10 @@
     }
 
     .todos-page__todos-list {
-      place-items: center;
-      grid-template-columns: 1fr;
-      padding: 1rem 2rem;
+      place-content: center;
+      grid-template-columns: 20rem;
+      padding: 1rem 1.5rem;
       gap: 2rem;
-
-      .card {
-        width: clamp(40ch, 50%, 80ch);
-
-        .card__title {
-          font-size: 1.3rem;
-        }
-
-        #todo-check {
-          top: 1.3rem;
-          left: 0.5rem;
-          height: 1rem;
-        }
-
-        &:last-child {
-          margin-bottom: 2rem;
-        }
-      }
     }
 
     .add-todo-btn {

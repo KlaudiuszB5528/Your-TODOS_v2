@@ -828,83 +828,6 @@ h6 {
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   padding: 2rem 0.5rem 1.3rem 4rem;
 }
-.todos-page .todos-page__todos-list .card {
-  position: relative;
-  width: clamp(45ch, 60%, 90ch);
-  height: 21rem;
-  display: flex;
-  flex-direction: column;
-  padding: 0.4rem;
-  background-color: #f9f7f7;
-  border-radius: 0.5rem;
-  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  scrollbar-gutter: stable both-edges;
-  transition: all 0.2s;
-}
-.todos-page .todos-page__todos-list .card:hover {
-  transform: translateY(-0.3rem) scale(1.05);
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.6);
-}
-.todos-page .todos-page__todos-list .card .dueDate {
-  font-size: bold;
-  color: rgba(17, 45, 78, 0.6);
-  width: 100%;
-  text-align: center;
-}
-.todos-page .todos-page__todos-list .card .card__title {
-  width: 70%;
-  word-break: break-word;
-  align-self: center;
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #112d4e;
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-}
-.todos-page .todos-page__todos-list .card .card__description {
-  width: 100%;
-  padding: 1rem;
-  text-align: center;
-  font-size: 1.3rem;
-  word-wrap: break-word;
-  color: #03396c;
-  overflow-y: auto;
-}
-.todos-page .todos-page__todos-list .card .card__description::-webkit-scrollbar {
-  width: 0.3rem;
-}
-.todos-page .todos-page__todos-list .card .card__description::-webkit-scrollbar-button {
-  height: 0.5rem;
-}
-.todos-page .todos-page__todos-list .card .delete-todo-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 1rem;
-  right: 0.5rem;
-  border: none;
-  outline: none;
-  background: none;
-  color: rgba(17, 45, 78, 0.5);
-}
-.todos-page .todos-page__todos-list .card .delete-todo-btn:hover {
-  color: #a42009;
-}
-.todos-page .todos-page__todos-list .card #todo-check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 1.3rem;
-  left: 0.5rem;
-}
-.todos-page .todos-page__todos-list .card #todo-check:checked ~ .card__description {
-  text-decoration: line-through;
-}
 .todos-page .add-todo-btn {
   position: absolute;
   border: none;
@@ -930,6 +853,108 @@ h6 {
   transform: translateY(-0.1rem);
 }
 
+.card {
+  perspective: 100rem;
+  height: 20rem;
+  position: relative;
+}
+.card__side {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: white;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable both-edges;
+  transition: all 0.8s;
+}
+.card__side--front {
+  outline: 1px solid #112d4e;
+  outline-offset: -0.7rem;
+  display: grid;
+  place-content: center;
+}
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+.card__side--front .dueDate {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: rgba(17, 45, 78, 0.6);
+  text-align: center;
+}
+.card__side--front .dueDate.completed {
+  text-decoration: line-through;
+}
+.card__side--front .card__title {
+  word-break: break-word;
+  align-self: center;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #112d4e;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+.card__side--front .card__title.completed {
+  text-decoration: line-through;
+}
+.card__side--back {
+  transform: rotateY(180deg);
+  display: grid;
+  place-content: center;
+}
+.card__side--back .delete-todo-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  right: 0.6rem;
+  border: none;
+  outline: none;
+  background: none;
+  color: rgba(17, 45, 78, 0.5);
+}
+.card__side--back .delete-todo-btn:hover {
+  color: #a42009;
+}
+.card__side--back #todo-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+}
+.card__side--back #todo-check:checked ~ .card__description {
+  text-decoration: line-through;
+}
+.card__side--back .card__description {
+  width: 100%;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+  word-wrap: break-word;
+  color: #03396c;
+  overflow-y: auto;
+}
+.card__side--back .card__description::-webkit-scrollbar {
+  width: 0.2rem;
+}
+.card__side--back .card__description::-webkit-scrollbar-button {
+  height: 1rem;
+}
+.card:hover .card__side--back {
+  transform: rotateY(0deg);
+}
+
 @media screen and (max-width: 787px) {
   .todos-page .todos-page__project-title {
     margin-bottom: 4rem;
@@ -942,24 +967,10 @@ h6 {
     width: 80%;
   }
   .todos-page .todos-page__todos-list {
-    place-items: center;
-    grid-template-columns: 1fr;
-    padding: 1rem 2rem;
+    place-content: center;
+    grid-template-columns: 20rem;
+    padding: 1rem 1.5rem;
     gap: 2rem;
-  }
-  .todos-page .todos-page__todos-list .card {
-    width: clamp(40ch, 50%, 80ch);
-  }
-  .todos-page .todos-page__todos-list .card .card__title {
-    font-size: 1.3rem;
-  }
-  .todos-page .todos-page__todos-list .card #todo-check {
-    top: 1.3rem;
-    left: 0.5rem;
-    height: 1rem;
-  }
-  .todos-page .todos-page__todos-list .card:last-child {
-    margin-bottom: 2rem;
   }
   .todos-page .add-todo-btn {
     top: 4.3rem;

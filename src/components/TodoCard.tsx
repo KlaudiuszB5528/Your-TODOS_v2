@@ -18,6 +18,8 @@ export const TodoCard: React.FC<TodoCardProps> = (props) => {
     return `${year}-${month}-${day}`;
   };
 
+  const isCompleted = props.completed ? "completed" : "";
+
   const handleCheckboxChange: React.ChangeEventHandler<HTMLInputElement> = (
     e
   ) => {
@@ -27,21 +29,30 @@ export const TodoCard: React.FC<TodoCardProps> = (props) => {
 
   return (
     <div className="card" data-index={props.id}>
-      <input
-        type="checkbox"
-        name="todo-check"
-        id="todo-check"
-        checked={props.completed}
-        onChange={handleCheckboxChange}
-      />
-      <div className="card__title">{props.title}</div>
-      <div className="dueDate">
-        Due Date: {convertDate(new Date(props.dueDate))}
+      <div className="card__side card__side--front">
+        <div className={`card__title ${isCompleted}`}>{props.title}</div>
+        <div className={`dueDate ${isCompleted}`}>
+          Due Date: {convertDate(new Date(props.dueDate))}
+        </div>
       </div>
-      <div className="card__description">{props.description}</div>
-      <button className="delete-todo-btn" onClick={() => deleteTodo(props.id)}>
-        <i className="fa-solid fa-trash-alt" />
-      </button>
+      <div className="card__side card__side--back">
+        <input
+          type="checkbox"
+          name="todo-check"
+          id="todo-check"
+          checked={props.completed}
+          onChange={handleCheckboxChange}
+        />
+        <button
+          className="delete-todo-btn"
+          onClick={() => deleteTodo(props.id)}
+        >
+          <i className="fa-solid fa-trash-alt" />
+        </button>
+        <div className={`card__description ${isCompleted}`}>
+          {props.description}
+        </div>
+      </div>
     </div>
   );
 };
