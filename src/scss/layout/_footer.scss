@@ -2,6 +2,7 @@
 @use "../abstracts/variables" as *;
 
 .footer {
+  grid-area: footer;
   @include displayFlexCentered;
   box-shadow: 0 0 0.2rem gray;
   gap: 0.5rem;
@@ -25,19 +26,11 @@
 
 @media screen and(max-width:787px) {
   .footer {
-    @include displayFlexCentered;
-    box-shadow: 0 0 0.2rem gray;
     gap: 0.3rem;
-    color: $navy;
     font-size: 0.8rem;
 
     i {
-      color: $navy;
       font-size: 0.9rem;
-      transition: transform 0.3s ease-in-out;
-      &:hover {
-        transform: rotateY(1turn) scale(1.2);
-      }
     }
   }
 }

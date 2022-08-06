@@ -170,6 +170,9 @@
       &::-webkit-scrollbar-button {
         height: 1rem;
       }
+
+      scrollbar-color: $cold $navy;
+      scrollbar-width: thin;
     }
 
     .card:hover & {

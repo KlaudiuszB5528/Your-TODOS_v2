@@ -30,6 +30,9 @@ html {
 html,
 body {
   height: 100%;
+  min-height: 100vh;
+  height: -webkit-fill-available;
+  height: -moz-available;
   box-sizing: border-box;
 }
 
@@ -149,6 +152,7 @@ h6 {
 }
 
 .footer {
+  grid-area: footer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,21 +172,11 @@ h6 {
 
 @media screen and (max-width: 787px) {
   .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 0.2rem gray;
     gap: 0.3rem;
-    color: #112d4e;
     font-size: 0.8rem;
   }
   .footer i {
-    color: #112d4e;
     font-size: 0.9rem;
-    transition: transform 0.3s ease-in-out;
-  }
-  .footer i:hover {
-    transform: rotateY(1turn) scale(1.2);
   }
 }
 @-webkit-keyframes typing {
@@ -944,6 +938,8 @@ h6 {
   word-wrap: break-word;
   color: #03396c;
   overflow-y: auto;
+  scrollbar-color: #dbe2ef #112d4e;
+  scrollbar-width: thin;
 }
 .card__side--back .card__description::-webkit-scrollbar {
   width: 0.2rem;
