@@ -949,6 +949,9 @@ h6 {
 }
 
 @media screen and (max-width: 787px) {
+  .todos-page {
+    max-height: 60vh;
+  }
   .todos-page .todos-page__project-title {
     margin-bottom: 4rem;
   }
