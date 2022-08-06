@@ -874,6 +874,9 @@ h6 {
   display: grid;
   place-content: center;
 }
+.card__side--front .mobile-prompt {
+  display: none;
+}
 .card:hover .card__side--front {
   transform: rotateY(-180deg);
 }
@@ -984,5 +987,14 @@ h6 {
   }
   .todos-page .add-todo-btn:active {
     transform: translate(50%, -0.1rem);
+  }
+  .card .mobile-prompt {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-45%);
+    top: 1rem;
+    font-size: 1rem;
+    color: rgba(17, 45, 78, 0.7);
   }
 }/*# sourceMappingURL=main.css.map */

@@ -93,6 +93,10 @@
     display: grid;
     place-content: center;
 
+    .mobile-prompt {
+      display: none;
+    }
+
     .card:hover & {
       transform: rotateY(-180deg);
     }
@@ -223,6 +227,18 @@
       &:active {
         transform: translate(50%, -0.1rem);
       }
+    }
+  }
+
+  .card {
+    .mobile-prompt {
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-45%);
+      top: 1rem;
+      font-size: 1rem;
+      color: rgba($navy, 0.7);
     }
   }
 }
