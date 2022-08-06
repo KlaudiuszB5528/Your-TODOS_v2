@@ -34,13 +34,11 @@
 
 @media screen and (max-width: 787px) {
   #root {
-    height: 100%;
-    width: 100%;
     grid-template-columns: 16rem 1fr;
   }
 
   .sidebar {
-    grid-template-rows: 0.1fr 0.8fr 0.1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
   }
 
   .main-section {

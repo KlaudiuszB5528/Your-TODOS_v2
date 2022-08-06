@@ -23,24 +23,19 @@
   height: 2rem;
 }
 
-:root {
-  --vh: 100vh;
-}
-
 html {
   font-size: 62.5%;
-}
-
-html,
-body {
-  height: 100%;
-  min-height: 100vh;
+  height: fill-available;
   height: -webkit-fill-available;
   height: -moz-available;
-  box-sizing: border-box;
 }
 
 body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -113,12 +108,10 @@ h6 {
 
 @media screen and (max-width: 787px) {
   #root {
-    height: 100%;
-    width: 100%;
     grid-template-columns: 16rem 1fr;
   }
   .sidebar {
-    grid-template-rows: 0.1fr 0.8fr 0.1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
   }
   .main-section {
     overflow-y: auto;
