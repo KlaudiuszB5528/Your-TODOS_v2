@@ -23,6 +23,10 @@
   height: 2rem;
 }
 
+:root {
+  --vh: 100vh;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -114,7 +118,7 @@ h6 {
     grid-template-columns: 16rem 1fr;
   }
   .sidebar {
-    grid-template-rows: 13rem 1fr 6rem;
+    grid-template-rows: 0.1fr 0.8fr 0.1fr;
   }
   .main-section {
     overflow-y: auto;
