@@ -57,6 +57,7 @@ export const SidebarProjectListElement: React.FC<Props> = (props) => {
     <li key={props.index}>
       <input
         type="text"
+        maxLength={16}
         defaultValue={props.project}
         className="sidebar__edit-project-input"
         data-open="false"
