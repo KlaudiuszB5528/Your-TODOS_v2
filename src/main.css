@@ -55,12 +55,11 @@ html {
 }
 
 body {
+  display: flex;
   box-sizing: border-box;
   min-height: 100vh;
-  min-height: fill-available;
-  min-height: -webkit-fill-available;
-  min-height: -moz-available;
-  height: 100%;
+  min-width: 100vw;
+  overflow-x: hidden;
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
