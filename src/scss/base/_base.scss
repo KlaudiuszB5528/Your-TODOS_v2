@@ -25,6 +25,24 @@
   &::-webkit-scrollbar-button {
     height: 2rem;
   }
+
+  @media screen and (max-width: 787px) {
+    * {
+      &::-webkit-scrollbar {
+        width: 0.6rem;
+      }
+      &::-webkit-scrollbar-track {
+        border-radius: 1rem;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+      }
+
+      &::-webkit-scrollbar-button {
+        height: 2rem;
+      }
+    }
+  }
 }
 
 html {
@@ -32,6 +50,14 @@ html {
   height: fill-available;
   height: -webkit-fill-available;
   height: -moz-available;
+
+  @media screen and (max-width: 900px) {
+    font-size: 56%;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -66,28 +92,4 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
-}
-
-@media screen and (max-width: 787px) {
-  * {
-    &::-webkit-scrollbar {
-      width: 0.6rem;
-    }
-    &::-webkit-scrollbar-track {
-      border-radius: 1rem;
-    }
-    &::-webkit-scrollbar-thumb {
-      border-radius: 1rem;
-    }
-
-    &::-webkit-scrollbar-button {
-      height: 2rem;
-    }
-  }
-
-  html {
-    font-size: 50%;
-    height: 100%;
-    width: 100%;
-  }
 }

@@ -153,6 +153,10 @@
       top: 1rem;
       left: 0.5rem;
 
+      &:active {
+        color: $navy;
+      }
+
       &:checked ~ .card__description {
         text-decoration: line-through;
       }

@@ -22,12 +22,36 @@
 *::-webkit-scrollbar-button {
   height: 2rem;
 }
+@media screen and (max-width: 787px) {
+  * *::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+  * *::-webkit-scrollbar-track {
+    border-radius: 1rem;
+  }
+  * *::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+  }
+  * *::-webkit-scrollbar-button {
+    height: 2rem;
+  }
+}
 
 html {
   font-size: 62.5%;
   height: fill-available;
   height: -webkit-fill-available;
   height: -moz-available;
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 56%;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -64,25 +88,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-@media screen and (max-width: 787px) {
-  *::-webkit-scrollbar {
-    width: 0.6rem;
-  }
-  *::-webkit-scrollbar-track {
-    border-radius: 1rem;
-  }
-  *::-webkit-scrollbar-thumb {
-    border-radius: 1rem;
-  }
-  *::-webkit-scrollbar-button {
-    height: 2rem;
-  }
-  html {
-    font-size: 50%;
-    height: 100%;
-    width: 100%;
-  }
-}
 #root {
   height: 100%;
   display: grid;
@@ -232,8 +237,8 @@ h6 {
   font-size: 1.6rem;
   -webkit-animation: slideIn 0.5s forwards;
           animation: slideIn 0.5s forwards;
-  -webkit-animation-delay: 2.1s;
-          animation-delay: 2.1s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
   transform: translateY(3rem);
   opacity: 0;
 }
@@ -243,12 +248,12 @@ h6 {
   background-clip: text;
   -webkit-background-clip: text;
   width: 21ch;
-  -webkit-animation: typing 2s steps(21), blink 450ms step-end infinite alternate;
-          animation: typing 2s steps(21), blink 450ms step-end infinite alternate;
+  -webkit-animation: typing 1.4s steps(21), blink 450ms step-end infinite alternate;
+          animation: typing 1.4s steps(21), blink 450ms step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   will-change: width;
-  border-right: 3px solid;
+  border-right: 3px solid #112d4e;
   font-size: 2.8rem;
 }
 .home-page .typewriter.welcome {
@@ -259,8 +264,8 @@ h6 {
   width: 20ch;
   -webkit-animation: typing 1.5s steps(20), fadeIn 0.2s forwards;
           animation: typing 1.5s steps(20), fadeIn 0.2s forwards;
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
   border: none;
   opacity: 0;
 }
@@ -269,8 +274,8 @@ h6 {
   width: 22ch;
   -webkit-animation: typing 1.5s steps(22), fadeIn 0.2s forwards;
           animation: typing 1.5s steps(22), fadeIn 0.2s forwards;
-  -webkit-animation-delay: 3.2s;
-          animation-delay: 3.2s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
   border: none;
   opacity: 0;
 }
@@ -279,8 +284,8 @@ h6 {
   width: 21ch;
   -webkit-animation: typing 1.5s steps(21), fadeIn 0.2s forwards;
           animation: typing 1.5s steps(21), fadeIn 0.2s forwards;
-  -webkit-animation-delay: 4.7s;
-          animation-delay: 4.7s;
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s;
   border: none;
   opacity: 0;
 }
@@ -293,7 +298,7 @@ h6 {
 
 @media screen and (max-width: 787px) {
   .home-page .typewriter {
-    border-right: 0.3rem solid;
+    border-right: 0.2rem solid #112d4e;
     font-size: 1.9rem;
   }
 }
@@ -599,7 +604,7 @@ h6 {
 }
 .sidebar__projects .sidebar__projects-list ul {
   overflow-y: auto;
-  max-height: 35rem;
+  max-height: 40vh;
 }
 .sidebar__projects .sidebar__projects-list li {
   display: flex;
@@ -607,8 +612,12 @@ h6 {
   align-items: center;
   height: 3.2rem;
   font-size: 1.6rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+  background-image: linear-gradient(130deg, #112d4e 0%, #081524 50%, transparent 50%, transparent 100%);
+  background-size: 220%;
+  background-position: right;
+  transition: all 450ms;
   cursor: pointer;
 }
 .sidebar__projects .sidebar__projects-list li [data-open=false] {
@@ -622,7 +631,7 @@ h6 {
   display: none;
 }
 .sidebar__projects .sidebar__projects-list li:hover {
-  background-image: linear-gradient(to right, #112d4e, #081524);
+  background-position: left;
   color: #f9f7f7;
 }
 .sidebar__projects .sidebar__projects-list li a {
@@ -929,6 +938,9 @@ h6 {
   position: absolute;
   top: 1rem;
   left: 0.5rem;
+}
+.card__side--back #todo-check:active {
+  color: #112d4e;
 }
 .card__side--back #todo-check:checked ~ .card__description {
   text-decoration: line-through;

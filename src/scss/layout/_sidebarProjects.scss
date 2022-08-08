@@ -27,15 +27,25 @@
 
     ul {
       overflow-y: auto;
-      max-height: 35rem;
+      max-height: 40vh;
     }
 
     li {
       @include displayFlexSpaceBetween;
       height: 3.2rem;
       font-size: 1.6rem;
-      padding: 1rem;
+      padding: 0.5rem 1rem;
       border-radius: 0.5rem;
+      background-image: linear-gradient(
+        130deg,
+        $navy 0%,
+        darken($navy, 10%) 50%,
+        transparent 50%,
+        transparent 100%
+      );
+      background-size: 220%;
+      background-position: right;
+      transition: all 450ms;
       cursor: pointer;
 
       [data-open="false"] {
@@ -52,7 +62,7 @@
       }
 
       &:hover {
-        background-image: linear-gradient(to right, $navy, darken($navy, 10%));
+        background-position: left;
         color: $white;
       }
 

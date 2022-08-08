@@ -12,7 +12,7 @@
     text-align: center;
     font-size: 1.6rem;
     animation: slideIn 0.5s forwards;
-    animation-delay: 2.1s;
+    animation-delay: 1.5s;
     transform: translateY(3rem);
     opacity: 0;
   }
@@ -23,11 +23,11 @@
     background-clip: text;
     -webkit-background-clip: text;
     width: 21ch;
-    animation: typing 2s steps(21), blink 450ms step-end infinite alternate;
+    animation: typing 1.4s steps(21), blink 450ms step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     will-change: width;
-    border-right: 3px solid;
+    border-right: 3px solid $navy;
     font-size: 2.8rem;
 
     &.welcome {
@@ -38,7 +38,7 @@
       text-align: center;
       width: 20ch;
       animation: typing 1.5s steps(20), fadeIn 0.2s forwards;
-      animation-delay: 2.2s;
+      animation-delay: 1.6s;
       border: none;
       opacity: 0;
     }
@@ -46,7 +46,7 @@
       text-align: center;
       width: 22ch;
       animation: typing 1.5s steps(22), fadeIn 0.2s forwards;
-      animation-delay: 3.2s;
+      animation-delay: 2.5s;
       border: none;
       opacity: 0;
     }
@@ -54,7 +54,7 @@
       text-align: center;
       width: 21ch;
       animation: typing 1.5s steps(21), fadeIn 0.2s forwards;
-      animation-delay: 4.7s;
+      animation-delay: 3.7s;
       border: none;
       opacity: 0;
     }
@@ -74,7 +74,7 @@
 @media screen and (max-width: 787px) {
   .home-page {
     .typewriter {
-      border-right: 0.3rem solid;
+      border-right: 0.2rem solid $navy;
       font-size: 1.9rem;
     }
   }
