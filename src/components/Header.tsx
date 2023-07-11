@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+
 const Header: React.FC = () => {
   return (
     <header className="header">
-      <Link to="/Your-TODOS_v2">
+      <Link to="/">
         <div className="header__title">
           <i className="fa-solid fa-clipboard-list"></i>
           <h1>Your TODOS</h1>
