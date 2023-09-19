@@ -9,10 +9,10 @@ export const MainSection: React.FC = () => {
     <div className="main-section">
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/inbox" element={<Inbox />}></Route>
-        <Route path="/todays" element={<Inbox />}></Route>
-        <Route path="/tomorrows" element={<Inbox />}></Route>
-        <Route path="/todos/:project" element={<Todos />} />
+        <Route path="/Your-TODOS_v2/inbox" element={<Inbox />}></Route>
+        <Route path="/Your-TODOS_v2/todays" element={<Inbox />}></Route>
+        <Route path="/Your-TODOS_v2/tomorrows" element={<Inbox />}></Route>
+        <Route path="/Your-TODOS_v2/todos/:project" element={<Todos />} />
       </Routes>
     </div>
   );
